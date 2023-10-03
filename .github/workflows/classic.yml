@@ -13,6 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Autotag
+        id: action-autotag
         uses: Klemensas/action-autotag@stable
         with:          
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -34,7 +35,7 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           directory: 'out'
-          tag: 'latest'
+          tag: ${{ steps.action-autotag.outputs.tagname }}
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
