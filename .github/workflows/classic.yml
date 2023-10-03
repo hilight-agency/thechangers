@@ -1,43 +1,43 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches: ["master"]
-  workflow_dispatch:
+# on:
+#   push:
+#     branches: ["master"]
+#   workflow_dispatch:
 
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Autotag
-        id: action-autotag
-        uses: Klemensas/action-autotag@stable
-        with:          
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-      - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
-      - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build      
-      - name: Archive Release
-        uses: thedoctor0/zip-release@0.7.1
-        with:
-          type: 'zip'
-          filename: 'release.zip'
-          directory: 'out'
-          tag: ${{ steps.action-autotag.outputs.tagname }}
-      - name: Upload Release
-        uses: ncipollo/release-action@v1.12.0
-        with:
-          artifacts: "release.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   # Build job
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       - name: Autotag
+#         id: action-autotag
+#         uses: Klemensas/action-autotag@stable
+#         with:          
+#           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+#       - name: Setup Node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "18"
+#       - name: Run install
+#         uses: borales/actions-yarn@v4
+#         with:
+#           cmd: install # will run `yarn install` command
+#       - name: Build production bundle
+#         uses: borales/actions-yarn@v4
+#         with:
+#           cmd: build      
+#       - name: Archive Release
+#         uses: thedoctor0/zip-release@0.7.1
+#         with:
+#           type: 'zip'
+#           filename: 'release.zip'
+#           directory: 'out'
+#           tag: ${{ steps.action-autotag.outputs.tagname }}
+#       - name: Upload Release
+#         uses: ncipollo/release-action@v1.12.0
+#         with:
+#           artifacts: "release.zip"
+#           token: ${{ secrets.GITHUB_TOKEN }}
