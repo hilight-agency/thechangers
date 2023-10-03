@@ -70,9 +70,9 @@ export function Austronaut(props) {
   const { nodes, materials, animations } = useGLTF('/astro-processed.glb')
   const { actions } = useAnimations(animations, group)
   debugger
-  useEffect(() => {    
+  useEffect(() => {
     actions["Armature|888|Anima_Layer"].play()
-  }, [])
+  }, [actions])
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
@@ -83,6 +83,6 @@ export function Austronaut(props) {
       </group>
     </group>
   )
-  }
+}
 
 useGLTF.preload('/astro-processed.glb')

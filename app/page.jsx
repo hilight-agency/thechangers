@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
-const Austronaut = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Austronaut), { ssr: false })
+const Austronaut = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Austronaut), { ssr: true })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -19,17 +19,16 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
     </div>
   ),
 })
-const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 export default function Page() {
   return (
     <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center h-full'>
-          <View orbit className='relative h-screen w-full'>
-            <Suspense fallback={null}>
-              <Austronaut scale={1} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
-            </Suspense>
-          </View>
+      <div className='mx-auto h-full w-full flex flex-col flex-wrap items-center'>
+        <View orbit className='relative h-screen w-full'>
+          <Suspense fallback={null}>
+            <Austronaut scale={1} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
+          </Suspense>
+        </View>
       </div>
     </>
   )
