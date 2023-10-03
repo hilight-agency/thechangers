@@ -7,7 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
  * @see https://github.com/shadowwalker/next-pwa/issues/424#issuecomment-1332258575
  */
 const withPWA = require('@ducanh2912/next-pwa').default({
-  dest: 'public',
+  dest: 'out',
   disable: process.env.NODE_ENV === 'development',
 })
 
@@ -16,6 +16,7 @@ const nextConfig = {
   // compiler: {
   //   styledComponents: true,
   // },
+  output: 'export',
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   experimental: {
     reactRoot: 'concurrent',
