@@ -34,6 +34,7 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           directory: 'out'
+          tag: 'latest'
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
