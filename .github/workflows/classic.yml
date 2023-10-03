@@ -24,3 +24,13 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build      
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          directory: 'out'
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "release.zip"
