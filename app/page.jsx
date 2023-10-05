@@ -23,8 +23,8 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 export default function Page() {
   return (
     <>
-      <div className='mx-auto h-full w-full flex flex-col flex-wrap items-center'>
-        <View orbit className='relative h-screen w-full'>
+      <div className='mx-auto flex h-full w-full flex-col flex-wrap items-center'>
+        <View className='fixed h-screen w-full'>
           <Suspense fallback={null}>
             <Austronaut scale={1} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
           </Suspense>
