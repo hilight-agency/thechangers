@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import dynamic from 'next/dynamic'
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
+const Video = dynamic(() => import('@/components/Video'), {ssr: false})
 
 const Layout = ({ children }) => {
   const ref = useRef()
@@ -19,7 +20,7 @@ const Layout = ({ children }) => {
       }}
     >
       {children}
-      <Scene
+{/*       <Scene
         style={{
           position: 'fixed',
           top: 0,
@@ -30,7 +31,8 @@ const Layout = ({ children }) => {
         }}
         eventSource={ref}
         eventPrefix='client'
-      />
+      /> */}
+      <Video/>
     </div>
   )
 }
