@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import dynamic from 'next/dynamic'
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
-const Video = dynamic(() => import('@/components/Video'), {ssr: false})
+const Test = dynamic(() => import('@/components/Test'), {ssr: false})
 
 const Layout = ({ children }) => {
   const ref = useRef()
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         eventSource={ref}
         eventPrefix='client'
       /> */}
-      <Video/>
+      <Test shortUrl="tc_main_m.mp4" poster="tc_main_m.jpg" />
     </div>
   )
 }
