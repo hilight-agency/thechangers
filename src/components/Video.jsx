@@ -1,13 +1,46 @@
+'use static'
+
+import { useRef,useEffect } from 'react'
 import ReactPlayer from 'react-player/lazy'
 
 export default function Video ({ video, poster, ...props }) {
+   const ref = useRef()
+   const scrollSectionRef = useRef()
+     const playbackConst = 500;
+  let player;
+  function onLoadedVideo() {
+    const duration = ref?.current.getDuration();  
+    player = ref?.current.getInternalPlayer()
+    const scrollSection = scrollSectionRef.current;
+    if (ref?.current) {
+      scrollSection.style.height =
+        duration * playbackConst + "px";
+    }
+  } 
+    useEffect(() => {
+    function scrollPlay() {
+      if (player) {
+        const frameNumber = window.scrollY / playbackConst;
+        player.currentTime = frameNumber
+      }
+      window.requestAnimationFrame(scrollPlay);
+    }
+    window.requestAnimationFrame(scrollPlay);
+  }, []);
   return (
-    <ReactPlayer {...props}
-      config={{ file: { attributes: { poster: poster } } }}
-      url={video}
-      loop={props.loop || false}
-      muted={props.muted || false}
-    />
+    <div>
+      <div className='fixed left-0 top-0'>
+      <ReactPlayer {...props}
+        ref={ref}
+        config={{ file: { attributes: { poster: poster } } }}
+        url={video}
+        onReady={onLoadedVideo}
+        loop={props.loop || false}
+        muted={props.muted || false}
+        
+      /></div>
+      <div ref={scrollSectionRef} id="scrollSection" className="block"></div>
+    </div>
   )
 }
 
