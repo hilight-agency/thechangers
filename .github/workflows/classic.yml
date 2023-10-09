@@ -34,7 +34,7 @@ jobs:
         uses: ncipollo/release-action@v1.12.0
         with:
           allowUpdates: true
-          artifacts: 'release.zip'
+          artifacts: 'out/release.zip'
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: 'latest'
