@@ -31,9 +31,8 @@ jobs:
           server: ${{ secrets.SSH_SERVER }}
           password: ${{ secrets.SSH_PASSWORD }}
           local_path: './out/*'
-          remote_path: '/domains/mustbefamily.com/public_html/test'
+          remote_path: '/home/${{ secrets.SSH_USER }}/domains/mustbefamily.com/public_html/test'
           delete_remote_files: true
-          sftp_only: true
           sftpArgs: '-o ConnectTimeout=5'
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
