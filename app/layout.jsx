@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
       */}
       <Head />
       <body>
-        <Layout>{children}</Layout>
+          <Layout>{children}</Layout>
       </body>
     </html>
   )

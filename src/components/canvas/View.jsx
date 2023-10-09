@@ -15,7 +15,7 @@ const View = forwardRef(({ children, orbit, ...props }, ref) => {
       <Three>
         <ViewImpl track={localRef}>
           {children}
-          <Environment preset="forest" />
+          <Environment preset='forest' />
           {orbit && <OrbitControls />}
         </ViewImpl>
       </Three>
