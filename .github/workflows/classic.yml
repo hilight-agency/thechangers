@@ -24,6 +24,16 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.SSH_USER }}
+          server: ${{ secrets.SSH_SERVER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          local_path: './out/*'
+          remote_path: '~/domains/mustbefamily.com/public_html/test'
+          delete_remote_files: true
+          sftpArgs: '-o ConnectTimeout=5'
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.1
         with:
