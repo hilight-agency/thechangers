@@ -15,6 +15,8 @@ jobs:
       - name: Autotag
         id: action-autotag
         uses: Klemensas/action-autotag@stable
+        with:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
