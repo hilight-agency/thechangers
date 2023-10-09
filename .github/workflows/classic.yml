@@ -43,6 +43,8 @@ jobs:
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
-          artifacts: 'release.zip'
+          allowUpdates: true
+          artifacts: 'out/release.zip'
+          replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: 'latest'
