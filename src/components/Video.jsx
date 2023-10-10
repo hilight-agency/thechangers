@@ -1,42 +1,56 @@
 'use static'
 
-import { useRef, useEffect } from 'react'
-import ReactPlayer from 'react-player/lazy'
+import { useRef, useEffect, useCallback, useState } from 'react'
+import ReactPlayer from 'react-player/file'
 
-export default function Video({ video, poster, ...props }) {
+export default function Video({ shortUrl, poster }) {
   const ref = useRef()
   const scrollSectionRef = useRef()
   const playbackConst = 500
-  let player
+  const [player, setPlayer] = useState()
+  const debouncedScrollPlay = useCallback(() => {
+    const frameNumber = window.pageYOffset / playbackConst
+    if (player) {
+      player.currentTime = frameNumber
+    }
+  }, [player])
   function onLoadedVideo() {
-    const duration = ref?.current.getDuration()
-    player = ref?.current.getInternalPlayer()
-    const scrollSection = scrollSectionRef.current
-    if (ref?.current) {
-      scrollSection.style.height = duration * playbackConst + 'px'
+    const tempref = ref?.current.getInternalPlayer()
+    if (tempref) {
+      const { duration, style } = tempref
+      style.width = '100vw'
+      style.height = '100vh'
+      style.objectFit = 'cover'
+      const scrollSection = scrollSectionRef.current
+      scrollSection.style.height =
+        Math.floor(duration) * playbackConst + playbackConst + tempref.getBoundingClientRect().height + 'px'
+      setPlayer(() => tempref)
     }
   }
   useEffect(() => {
-    function scrollPlay() {
-      if (player) {
-        const frameNumber = window.scrollY / playbackConst
-        player.currentTime = frameNumber
-      }
-      window.requestAnimationFrame(scrollPlay)
+    // Attach the debouncedScrollPlay function to the scroll event
+    window.addEventListener('scroll', debouncedScrollPlay)
+    return () => {
+      // Cleanup: Remove the event listener on unmount
+      window.removeEventListener('scroll', debouncedScrollPlay)
     }
-    window.requestAnimationFrame(scrollPlay)
-  }, [player])
+  }, [debouncedScrollPlay])
+
   return (
     <div className='relative z-10'>
-      <div className='fixed left-0 top-0'>
+      <div className='fixed left-0 top-0 w-full'>
         <ReactPlayer
-          {...props}
           ref={ref}
           config={{ file: { attributes: { poster: poster } } }}
-          url={video}
+          width={'100vw'}
+          height={'100vh'}
+          url={shortUrl}
           onReady={onLoadedVideo}
-          loop={props.loop || false}
-          muted={props.muted || false}
+          playing={false}
+          playsinline
+          loop={true}
+          muted={true}
+          alt={``}
         />
       </div>
       <div ref={scrollSectionRef} id='scrollSection' className='block'></div>

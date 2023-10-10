@@ -7,7 +7,6 @@ export function Austronaut(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/astro-processed.glb')
   const { actions } = useAnimations(animations, group)
-  debugger
   useEffect(() => {
     actions['Armature|888|Anima_Layer'].play()
   }, [actions])
