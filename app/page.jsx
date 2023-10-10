@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
-const Test = dynamic(() => import('@/components/Test'), { ssr: false })
+const Video = dynamic(() => import('@/components/Video'), { ssr: false })
 const Austronaut = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Austronaut), { ssr: true })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
@@ -26,10 +26,10 @@ export default function Page() {
     <>
       <Suspense fallback={null}>
         <div className='mx-auto flex h-full w-full flex-col flex-wrap items-center'>
+          <Video shortUrl='tc_main_m.mp4' poster='tc_main_m.jpg' />
           <View className='fixed h-screen w-full'>
             <Austronaut scale={1} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
           </View>
-          <Test shortUrl='tc_main_m.mp4' poster='tc_main_m.jpg' />
         </div>
       </Suspense>
     </>
