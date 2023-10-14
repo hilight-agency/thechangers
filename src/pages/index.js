@@ -21,10 +21,13 @@ const IndexPage = () => {
       </video>
       <div id="wrapper" className="w-full relative z-20">
         <section id="section-1" className="wfull h-screen flex flex-col justify-end items-center pb-3">
-          <Lottie animationData={ScrollDownLottie} 
-            loop autoPlay
-            className="w-10"
-          />
+          <div className="flex items-center flex-col text-white gap-1">
+            <Lottie animationData={ScrollDownLottie} 
+              loop autoPlay
+              className="w-10"
+            />
+            Scroll down
+          </div>
         </section>
       </div>
       {/* </div> */}
