@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/inclusive-sans": "^5.0.1",
     "@react-three/drei": "^9.88.2",
     "@react-three/fiber": "^8.14.5",
     "autoprefixer": "^10.4.16",

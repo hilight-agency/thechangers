@@ -1166,6 +1166,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/inclusive-sans@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/inclusive-sans/-/inclusive-sans-5.0.1.tgz#10331e0697a2b56dddc1a4bf712e5e9cca4450c1"
+  integrity sha512-yCLEJz7LzsWpIFufiKOi85TRA42UlFQhwas6USVYYN/381viSqvIbDtzMP99F8LJuzrcQq2TETQfPjWjtxc0vg==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.12.0":
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-2.12.0.tgz#4bd49fb678e739624d0bc39c3376b4781bf6a0ee"
