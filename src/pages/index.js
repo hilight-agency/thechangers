@@ -1,9 +1,15 @@
 import * as React from "react"
+import PreloaderVideo from "../components/preloadervideo";
+import Section1 from "../components/section1";
 const IndexPage = () => {
   return (
-    <main className="w-full h-full m-0 p-0 text-slate-300 bg-black">
-      <h1>Hi there!</h1>
-    </main>
+<>
+    <PreloaderVideo/>
+      <div id="wrapper" className="w-full relative z-20">
+        <Section1/>
+      </div>
+      {/* </div> */}
+    </>
   )
 }
 
