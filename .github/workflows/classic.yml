@@ -16,14 +16,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
-      - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
       - name: deploy file
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
