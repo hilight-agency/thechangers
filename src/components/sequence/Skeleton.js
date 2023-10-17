@@ -1,18 +1,11 @@
-import React from "react";
+import React from 'react';
 
-export const Skeleton = ({
-  count,
-  width,
-  wrapper: Wrapper,
-  height,
-  circle,
-  margin
-}) => {
+export const Skeleton = ({ count, width, wrapper: Wrapper, height, circle, margin }) => {
   const elements = [];
 
   for (let i = 0; i < count; i++) {
     let style = {
-      margin: margin
+      margin: margin,
     };
 
     if (width !== null) {
@@ -24,13 +17,13 @@ export const Skeleton = ({
     }
 
     if (width !== null && height !== null && circle) {
-      style.borderRadius = "100%";
+      style.borderRadius = '100%';
     }
 
     elements.push(
       <span key={i} className="skeleton" style={style}>
         &zwnj;
-      </span>
+      </span>,
     );
   }
 
@@ -54,5 +47,5 @@ Skeleton.defaultProps = {
   wrapper: null,
   height: null,
   circle: false,
-  margin: 0
+  margin: 0,
 };

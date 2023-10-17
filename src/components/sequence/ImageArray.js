@@ -1,5 +1,5 @@
-import { MainSq } from "./mainsq/index";
-import { useImage } from "../../hooks/useImage";
+import { MainSq } from './mainsq/index';
+import { useImage } from '../../hooks/useImage';
 
 const MainSqArray = () => {
   const [AA0, AA0S] = useImage(MainSq[0]);
@@ -389,7 +389,7 @@ const MainSqArray = () => {
     [AA173, AA173S],
     [AA174, AA174S],
     [AA175, AA175S],
-    [AA176, AA176S]
+    [AA176, AA176S],
   );
   return newImages;
 };

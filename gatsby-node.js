@@ -1,3 +1,3 @@
 exports.onCreateWebpackConfig = () => {
-    //nothing here
-  }
+  //nothing here
+};
