@@ -1,2 +1,2 @@
-import "./src/styles/global.css"
-import "@fontsource/inclusive-sans"
+import './src/styles/global.css';
+import '@fontsource/inclusive-sans';
