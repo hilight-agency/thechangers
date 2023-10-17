@@ -30,6 +30,7 @@ const NotFoundPage = () => {
       <p style={paragraphStyles}>
         Sorry 😔, we couldn’t find what you were looking for.
         <br />
+        {/* eslint-disable-next-line no-undef*/}
         {process.env.NODE_ENV === 'development' ? (
           <>
             <br />
