@@ -24,6 +24,8 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'prettier/prettier': ['error', { singleQuote: true, jsxSingleQuote: true }],
+    'jsx-quotes': ['error', 'prefer-single'],
     'react/display-name': 'off',
     'react/prop-types': 'off',
   },

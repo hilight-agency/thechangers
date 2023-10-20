@@ -16,7 +16,7 @@ export default function Timer({ deadline = new Date().toString() }) {
   }, [parsedDeadline]);
 
   return (
-    <div className="flex justify-between text-2xl gap-4">
+    <div className='flex justify-between text-2xl gap-4'>
       {Object.entries({
         D: time / DAY,
         H: (time / HOUR) % 24,
@@ -25,13 +25,13 @@ export default function Timer({ deadline = new Date().toString() }) {
       }).map(([label, value], i, a) => (
         <>
           {' '}
-          <div key={label} className="">
-            <div className="flex items-center flex-col">
+          <div key={label} className=''>
+            <div className='flex items-center flex-col'>
               <p>{`${Math.floor(value)}`.padStart(2, '0')}</p>
-              <span className="">{label}</span>
+              <span className=''>{label}</span>
             </div>
           </div>
-          {i !== a.length - 1 && <div className="leading-tight">:</div>}
+          {i !== a.length - 1 && <div className='leading-tight'>:</div>}
         </>
       ))}
     </div>
