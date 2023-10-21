@@ -4,8 +4,9 @@ import { Controller, Scene } from 'react-scrollmagic';
 import Lottie from 'lottie-react';
 import ScrollDownLottie from '../lottie/white_stripes_down.json';
 import Timer from '../components/timer';
+import Section2 from '../components/section2';
+import Section3 from '../components/section3';
 import Sequence from '../components/sequence/ImageSequence';
-import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
 
 const IndexPage = () => {
   const ref = React.useRef();
@@ -32,7 +33,9 @@ const IndexPage = () => {
                   <div className='w-full h-[200vh]'></div>
                   <section
                     id='section-1'
-                    className='w-full h-screen flex flex-col justify-end items-center pb-3 fixed top-0 left-0 z-40'
+                    className={`w-full h-screen flex flex-col justify-end items-center pb-3 fixed top-0 left-0 z-40 ${
+                      progress >= 1 ? ` hidden` : ` block`
+                    }`}
                   >
                     <div
                       className='flex items-center flex-col gap-1'
@@ -48,57 +51,9 @@ const IndexPage = () => {
               );
             }}
           </Scene>
-          <div id='triggerstart' className='w-full h-100vh flex flex-col items-center'>
-            <ScrollTrigger
-              start='top center'
-              end='bottom center'
-              markers
-              scrub
-              pin='#triggerstart'
-              trigger='#triggerstart'
-            >
-              <Timeline
-                playState='pause'
-                target={[
-                  <div
-                    key='0'
-                    className={`uppercase text-5xl font-bold tracking-[3.552px] opacity-0 text-center`}
-                  >
-                    Place where ideas transform Tomorrow0
-                  </div>,
-                  <div
-                    key='1'
-                    className={`uppercase text-5xl font-bold tracking-[3.552px] opacity-0 text-center`}
-                  >
-                    Place where ideas transform Tomorrow1
-                  </div>,
-                ]}
-              >
-                <Tween
-                  from={{ opacity: 0, display: 'none', y: '100%' }}
-                  to={{ opacity: 1, display: 'block', y: '-50%' }}
-                  target={0}
-                />
-                <Tween
-                  from={{ opacity: 1, display: 'block', y: '-50%' }}
-                  to={{ opacity: 0, display: 'none', y: '-100%' }}
-                  target={0}
-                />
-                <Tween
-                  from={{ opacity: 0, display: 'none', y: '100%' }}
-                  to={{ opacity: 1, display: 'block', y: '-50%' }}
-                  target={1}
-                />
-                <Tween
-                  from={{ opacity: 1, display: 'block', y: '-50%' }}
-                  to={{ opacity: 0.5, display: 'none', y: '-100%' }}
-                  target={1}
-                />
-              </Timeline>
-            </ScrollTrigger>
-          </div>
-
-          <div id='triggerend' className='w-full h-[200vh]'></div>
+          <Section2 />
+          <Section3 />
+          <div className='h-screen'></div>
         </div>
       </Controller>
     </>
