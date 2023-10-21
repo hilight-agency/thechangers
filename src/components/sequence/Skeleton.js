@@ -21,7 +21,7 @@ export const Skeleton = ({ count, width, wrapper: Wrapper, height, circle, margi
     }
 
     elements.push(
-      <span key={i} className="skeleton" style={style}>
+      <span key={i} className='skeleton' style={style}>
         &zwnj;
       </span>,
     );
