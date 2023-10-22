@@ -9,21 +9,73 @@ export default function Section3() {
   const [progress, setProgress] = React.useState(0);
   const texts = [
     {
-      text: '"The Changers" is a unique event that gathers investors, decision makers, and celebrities from all over the world at the Meydan Hotel. It provides opportunities for entrepreneurs, companies and influencers, including access to politicians and entertainment stars.',
+      text: (
+        <>
+          &quot;The Changers&quot;
+          <br />
+          is a unique event <br />
+          that gathers investors, <br />
+          decision makers, and celebrities from all over the world at the Meydan Hotel. It provides
+          <br />
+          opportunities for entrepreneurs, companies and influencers, including access to
+          <br />
+          politicians and entertainment stars.
+          <br />
+        </>
+      ),
       class: 'text-left',
+      points: {
+        from: '20%',
+        toOpacity: '15%',
+        toMiddle: '0%',
+        toTop: '-80%',
+      },
     },
     {
-      text: 'Venture capitalists and investors are also present, ready to support innovation. The participation of the royal families adds status to the event, making it a platform for contacts and partnerships.',
+      text: (
+        <>
+          Venture capitalists and investors
+          <br />
+          are also present, ready to support innovation.
+          <br />
+          The participation of the royal families adds status to the
+          <br />
+          event, making it a platform <br />
+          for contacts and
+          <br />
+          partnerships.
+        </>
+      ),
       class: 'text-right',
+      points: {
+        from: '-40%',
+        toOpacity: '-45%',
+        toMiddle: '-60%',
+        toTop: '-140%',
+      },
     },
     {
-      text: '"The Changers" is a catalyst for change and an opportunity to establish the future of trade and influence.',
+      text: (
+        <>
+          &quot;The Changers&quot; <br />
+          is a catalyst for change and
+          <br />
+          an opportunity to establish the future of trade and influence.
+          <br />
+        </>
+      ),
       class: 'text-center',
+      points: {
+        from: '-50%',
+        toOpacity: '-55%',
+        toMiddle: '-70%',
+        toTop: '-150%',
+      },
     },
   ];
   return (
     <React.Fragment>
-      <div className='w-full h-full fixed bottom-0 z-30'>
+      <div className={`w-full h-full fixed bottom-0 z-30 ${progress ? 'block' : 'hidden'}`}>
         <Sequence
           ref={seqref}
           progress={progress}
@@ -31,6 +83,7 @@ export default function Section3() {
           className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
         />
       </div>
+
       <div id='section3' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
           start='center bottom'
@@ -47,26 +100,31 @@ export default function Section3() {
           <Timeline
             playState='pause'
             target={texts.map((item, inx) => (
-              <p key={inx} className={`${item.class} uppercase text-xl`}>
+              <p key={inx} className={`${item.class} uppercase text-xl p-2`} style={{ opacity: 0 }}>
                 {item.text}
-                <br />
-                {progress}
               </p>
             ))}
           >
-            {texts.map((...params) => (
-              <>
-                <Tween
-                  from={{ opacity: 0, y: '50%' }}
-                  to={{ opacity: 1, y: '5%' }}
-                  duration={10}
-                  target={params[1]}
-                />
-                <Tween to={{ y: '-50%' }} duration={30} target={params[1]} />
-                <Tween to={{ opacity: 0, y: '-100%' }} duration={10} target={params[1]} />
-                <Tween to={{ display: 'none' }} duration={0} target={params[1]} />
-              </>
-            ))}
+            {texts.map((...params) => {
+              console.log(params);
+              return (
+                <>
+                  <Tween
+                    from={{ y: params[0]?.points.from }}
+                    to={{ opacity: 1, y: params[0]?.points.toOpacity }}
+                    duration={10}
+                    target={params[1]}
+                  />
+                  <Tween to={{ y: params[0]?.points.toMiddle }} duration={30} target={params[1]} />
+                  <Tween
+                    to={{ opacity: 0, y: params[0]?.points.toTop }}
+                    duration={10}
+                    target={params[1]}
+                  />
+                  <Tween to={{ display: 'none' }} duration={0} target={params[1]} />
+                </>
+              );
+            })}
           </Timeline>
         </ScrollTrigger>
       </div>
