@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
+import Sequence from './sequence/ImageSequence';
+import { CosmoSqArray } from './sequence/ImageArray';
 
 export default function Section3() {
+  const cosmosqArr = CosmoSqArray();
+  const seqref = React.useRef();
+  const [progress, setProgress] = React.useState(0);
   const texts = [
     {
       text: '"The Changers" is a unique event that gathers investors, decision makers, and celebrities from all over the world at the Meydan Hotel. It provides opportunities for entrepreneurs, companies and influencers, including access to politicians and entertainment stars.',
@@ -18,7 +23,15 @@ export default function Section3() {
   ];
   return (
     <React.Fragment>
-      <div id='section3' className='w-full h-screen flex flex-col items-center'>
+      <div className='w-full h-full fixed bottom-0 z-30'>
+        <Sequence
+          ref={seqref}
+          progress={progress}
+          array={cosmosqArr}
+          className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
+        />
+      </div>
+      <div id='section3' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
           start='center bottom'
           end='bottom center'
@@ -29,12 +42,15 @@ export default function Section3() {
           endTrigger={'#section3trigger'}
           trigger={'#section3'}
           scrub
+          onUpdate={(self) => setProgress(self.progress)}
         >
           <Timeline
             playState='pause'
             target={texts.map((item, inx) => (
               <p key={inx} className={`${item.class} uppercase text-xl`}>
                 {item.text}
+                <br />
+                {progress}
               </p>
             ))}
           >
