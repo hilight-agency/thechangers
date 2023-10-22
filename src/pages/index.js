@@ -7,8 +7,10 @@ import Timer from '../components/timer';
 import Section2 from '../components/section2';
 import Section3 from '../components/section3';
 import Sequence from '../components/sequence/ImageSequence';
+import { MainSqArray } from '../components/sequence/ImageArray';
 
 const IndexPage = () => {
+  const mainsqArr = MainSqArray();
   const ref = React.useRef();
   const seqref = React.useRef();
   return (
@@ -27,7 +29,7 @@ const IndexPage = () => {
                     }`}
                     style={{ opacity: progress < 0.85 ? 1 : 5 + 1 - (progress + 0.2) / 0.2 }}
                   >
-                    <Sequence ref={seqref} progress={progress} />
+                    <Sequence ref={seqref} progress={progress} array={mainsqArr} />
                   </div>
 
                   <div className='w-full h-[200vh]'></div>

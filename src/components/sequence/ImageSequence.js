@@ -1,17 +1,14 @@
 import React, { forwardRef } from 'react';
 import { Skeleton } from './Skeleton';
-import MainSqArray from './ImageArray';
 
-const ImageSequence = forwardRef(({ progress }, ref) => {
-  const newImages = MainSqArray();
+const ImageSequence = forwardRef(({ progress, array }, ref) => {
+  let index = Math.round(progress * 1 * (array.length - 1));
 
-  let index = Math.round(progress * 1 * (newImages.length - 1));
-
-  if (newImages[index][1] !== undefined) {
-    if (newImages[index][1] === 'loading') {
+  if (array[index][1] !== undefined) {
+    if (array[index][1] === 'loading') {
       return <Skeleton width='100%' height='100%' />;
     } else {
-      return newImages.map((item, i) => (
+      return array.map((item, i) => (
         <span
           ref={ref}
           key={i}
