@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Skeleton } from './Skeleton';
 
-const ImageSequence = forwardRef(({ progress, array }, ref) => {
+const ImageSequence = forwardRef(({ progress, array, className }, ref) => {
   let index = Math.round(progress * 1 * (array.length - 1));
 
   if (array[index][1] !== undefined) {
@@ -12,7 +12,7 @@ const ImageSequence = forwardRef(({ progress, array }, ref) => {
         <span
           ref={ref}
           key={i}
-          className='h-full w-full bg-cover bg-center'
+          className={className || 'h-full w-full bg-cover bg-center bg-no-repeat'}
           style={{
             display: i !== index ? 'none' : 'block',
             backgroundImage: `url('${item[0] ? item[0].src : null}')`,

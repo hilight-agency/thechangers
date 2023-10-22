@@ -11,7 +11,6 @@ export default function Section2() {
           start='center bottom'
           end='bottom center'
           scrub
-          markers
           id='section2scroll'
           pin={'#section2'}
           pinSpacing={false}
