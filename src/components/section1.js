@@ -30,7 +30,7 @@ export default function Section1() {
         }`}
       >
         <div className='flex items-center flex-col gap-1' style={{ opacity: 1.2 - progress * 5 }}>
-          <Timer deadline={new Date(Date.now() + 43 * 24 * 60 * 60 * 1000).toString()} />
+          <Timer deadline={new Date('2023-11-27T05:00:00Z')} />
           <Lottie animationData={ScrollDownLottie} loop autoPlay className='w-20' />
         </div>
       </section>
