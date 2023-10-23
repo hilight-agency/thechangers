@@ -99,6 +99,7 @@ export default function Section3() {
               console.log(params);
               return (
                 <>
+                  <Tween target={0} duration={10} to={{ opacity: 0 }} />
                   <Tween
                     from={{ y: params[0]?.points.from }}
                     to={{ opacity: 1, y: params[0]?.points.toOpacity }}

@@ -9,7 +9,10 @@ export default function Astronaut() {
   const progress = useSequenceProgressStore((state) => state.astronautSq1);
 
   return (
-    <div className={`w-full h-full fixed bottom-0 z-30 ${progress ? 'block' : 'hidden'}`}>
+    <div
+      className={`w-full h-full fixed bottom-0 z-30 ${progress ? 'block' : 'hidden'}`}
+      style={{ opacity: progress < 1 ? progress * 10 : 1 }}
+    >
       <Sequence
         ref={seqref}
         progress={progress}
