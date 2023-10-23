@@ -24,7 +24,7 @@ export default function Stars() {
                   Array.from({ length: 20 }, () => Math.random() * 0.8 + 0.1),
                 ),
               }}
-              stagger={{ ease: 'power2.inOut', amount: 0.5 }}
+              stagger={{ ease: 'power2.inOut', amount: 2 }}
             >
               <g className='Star437'>
                 <path
