@@ -1212,6 +1212,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.51.0.tgz#6d419c240cfb2b66da37df230f7e7eef801c32fa"
   integrity sha512-HxjQ8Qn+4SI3/AFv6sOrDB+g6PpUTDwSJiQqOrnneEk8L71161srI9gjzzZvYVbzHiVg/BvcH95+cK/zfIt4pg==
 
+"@fontsource/habibi@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/habibi/-/habibi-5.0.8.tgz#f5f1fe51dd3c78c5bd88d6cf7cf3ba6a392dffa5"
+  integrity sha512-zEykNFWVQc25/fCeX0HUXkBa26oaSR7KUiRQdbuBBztKHUefYDM2qLaeLcp04RsE+W+/+YlR4KdZTH3GmocWvQ==
+
 "@fontsource/inclusive-sans@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@fontsource/inclusive-sans/-/inclusive-sans-5.0.1.tgz#10331e0697a2b56dddc1a4bf712e5e9cca4450c1"

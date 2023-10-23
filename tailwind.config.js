@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
@@ -6,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Gabarito"', ...defaultTheme.fontFamily.sans],
+        serif: ['"Habibi"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
