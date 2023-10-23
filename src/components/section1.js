@@ -6,11 +6,13 @@ import ScrollDownLottie from '../lottie/white_stripes_down.json';
 import Timer from './timer';
 import Sequence from './sequence/ImageSequence';
 import { MainSqArray } from './sequence/ImageArray';
+import { useSequenceProgressStore } from './states/sequencesStore';
 export default function Section1() {
   const mainsqArr = MainSqArray();
   const ref = React.useRef();
   const seqref = React.useRef();
-  const [progress, setProgress] = React.useState(0);
+  const progress = useSequenceProgressStore((state) => state.mainSq);
+  const setProgress = useSequenceProgressStore((state) => state.setMainSq);
   return (
     <React.Fragment>
       <PreloaderVideo ref={ref} />
