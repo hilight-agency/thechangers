@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
-import Sequence from './sequence/ImageSequence';
-import { CosmoSqArray } from './sequence/ImageArray';
+import { useSequenceProgressStore } from './states/sequencesStore';
+import Astronaut from './astronaut';
 
 export default function Section3() {
-  const cosmosqArr = CosmoSqArray();
-  const seqref = React.useRef();
-  const [progress, setProgress] = React.useState(0);
+  const setProgress = useSequenceProgressStore((state) => state.setAstronautSq1);
   const texts = [
     {
       text: (
@@ -75,15 +73,7 @@ export default function Section3() {
   ];
   return (
     <React.Fragment>
-      <div className={`w-full h-full fixed bottom-0 z-30 ${progress ? 'block' : 'hidden'}`}>
-        <Sequence
-          ref={seqref}
-          progress={progress}
-          array={cosmosqArr}
-          className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
-        />
-      </div>
-
+      <Astronaut />
       <div id='section3' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
           start='center bottom'

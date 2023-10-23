@@ -2,8 +2,11 @@ import * as React from 'react';
 import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
 import { ExpoScaleEase } from 'gsap/EasePack';
 import { gsap } from 'gsap';
+import { useStarsStore } from './states/starsStore';
+
 gsap.registerPlugin(ExpoScaleEase);
 export default function Section2() {
+  const showStars = useStarsStore((state) => state.setShow);
   return (
     <React.Fragment>
       <div id='section2' className='w-full h-screen flex flex-col items-center'>
@@ -16,6 +19,8 @@ export default function Section2() {
           pinSpacing={false}
           trigger={'#section2'}
           endTrigger={'#section2trigger'}
+          onEnter={() => showStars(true)}
+          onLeaveBack={() => showStars(false)}
         >
           <Timeline
             playState='pause'
