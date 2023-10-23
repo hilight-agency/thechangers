@@ -21,12 +21,12 @@ export default function Section3() {
           <br />
         </>
       ),
-      class: 'text-left',
+      class: 'text-left relative bottom-[-100%]',
       points: {
-        from: '20%',
-        toOpacity: '15%',
-        toMiddle: '0%',
-        toTop: '-80%',
+        from: '-100%',
+        toOpacity: '-101%',
+        toMiddle: '-102%',
+        toTop: '-103%',
       },
     },
     {
@@ -44,12 +44,12 @@ export default function Section3() {
           partnerships.
         </>
       ),
-      class: 'text-right',
+      class: 'text-right relative top-0',
       points: {
-        from: '-40%',
-        toOpacity: '-45%',
-        toMiddle: '-60%',
-        toTop: '-140%',
+        from: '4%',
+        toOpacity: '3%',
+        toMiddle: '2%',
+        toTop: '1%',
       },
     },
     {
@@ -62,12 +62,12 @@ export default function Section3() {
           <br />
         </>
       ),
-      class: 'text-center',
+      class: 'text-center relative top-[25%]',
       points: {
-        from: '-50%',
-        toOpacity: '-55%',
-        toMiddle: '-70%',
-        toTop: '-150%',
+        from: '10%',
+        toOpacity: '9%',
+        toMiddle: '8%',
+        toTop: '7%',
       },
     },
   ];
@@ -76,10 +76,10 @@ export default function Section3() {
       <Astronaut />
       <div id='section3' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
-          start='center bottom'
+          start='top top'
           end='bottom center'
           id='section3scroll'
-          pin={'#section3'}
+          pin
           pinSpacing={false}
           endTrigger={'#section3trigger'}
           trigger={'#section3'}
@@ -89,7 +89,11 @@ export default function Section3() {
           <Timeline
             playState='pause'
             target={texts.map((item, inx) => (
-              <p key={inx} className={`${item.class} uppercase text-xl p-2`} style={{ opacity: 0 }}>
+              <p
+                key={inx}
+                className={`${item.class} uppercase text-xl font-semibold p-2`}
+                style={{ opacity: 0 }}
+              >
                 {item.text}
               </p>
             ))}
