@@ -28,7 +28,7 @@ jobs:
           server: ${{ secrets.SSH_SERVER }}
           password: ${{ secrets.SSH_PASSWORD }}
           local_path: './public/*'
-          remote_path: '/home/${{ secrets.SSH_USER }}/domains/mustbefamily.com/public_html/test'
+          remote_path: '/home/${{ secrets.SSH_USER }}/domains/mustbefamily.com/public_html/thechangers'
           delete_remote_files: true
           sftpArgs: '-o ConnectTimeout=5'
       - name: Archive Release
