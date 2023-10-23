@@ -78,7 +78,6 @@ export default function Section3() {
         <ScrollTrigger
           start='center bottom'
           end='bottom center'
-          markers
           id='section3scroll'
           pin={'#section3'}
           pinSpacing={false}
