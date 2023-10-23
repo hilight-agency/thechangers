@@ -46,10 +46,10 @@ export default function Section3() {
       ),
       class: 'text-right relative top-0',
       points: {
-        from: '4%',
-        toOpacity: '3%',
-        toMiddle: '2%',
-        toTop: '1%',
+        from: '18%',
+        toOpacity: '17%',
+        toMiddle: '16%',
+        toTop: '15%',
       },
     },
     {
@@ -64,10 +64,10 @@ export default function Section3() {
       ),
       class: 'text-center relative top-[25%]',
       points: {
-        from: '10%',
-        toOpacity: '9%',
-        toMiddle: '8%',
-        toTop: '7%',
+        from: '-2%',
+        toOpacity: '-3%',
+        toMiddle: '-4%',
+        toTop: '-5%',
       },
     },
   ];
@@ -80,6 +80,7 @@ export default function Section3() {
           end='bottom center'
           id='section3scroll'
           pin
+          /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           pinSpacing={false}
           endTrigger={'#section3trigger'}
           trigger={'#section3'}
