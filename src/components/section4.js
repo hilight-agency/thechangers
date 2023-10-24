@@ -29,7 +29,7 @@ export default function Section4() {
           end='bottom top'
           id='section4scroll'
           pin
-          markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }}
+          /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           pinSpacing={false}
           endTrigger={'#section4trigger'}
           trigger={'#section4'}
