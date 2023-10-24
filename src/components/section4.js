@@ -39,7 +39,7 @@ export default function Section4() {
             playState='pause'
             target={
               <h1
-                className={`uppercase text-2xl font-semibold p-2 relative pt-[64%]`}
+                className={`uppercase text-2xl font-semibold p-2 relative top-[25%]`}
                 style={{ opacity: 0 }}
               >
                 THERE WILL BE more than
@@ -48,7 +48,7 @@ export default function Section4() {
           >
             <>
               <Tween to={{ opacity: 1 }} duration={10} target={0} />
-              <div className='relative w-full text-center'>
+              <div className='relative w-full text-center top-[25%]'>
                 <Timeline
                   target={texts.map((item, index) => (
                     <p
