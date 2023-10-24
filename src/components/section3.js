@@ -95,7 +95,7 @@ export default function Section3() {
             target={texts.map((item) => (
               <p
                 key={item.key}
-                className={`${item.class} uppercase text-xl font-semibold p-2`}
+                className={`${item.class} uppercase text-xl font-semibold p-4`}
                 style={{ opacity: 0 }}
               >
                 {item.text}

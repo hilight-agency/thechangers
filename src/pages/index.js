@@ -26,8 +26,8 @@ const InstIcon = () => (
 const IndexPage = () => {
   return (
     <div id='wrapper' className='w-full relative z-20 text-white'>
-      <div className='w-full h-12 flex p-1 fixed z-50'>
-        <div className='flex-row w-full flex justify-between items-center'>
+      <div className='w-full flex p-2 fixed z-50'>
+        <div className='flex-row w-full h-12 flex justify-between items-center'>
           <div className='flex-1'>
             <a
               href='https://instagram.com/thechangers.ae?igshid=MzRlODBiNWFlZA=='
