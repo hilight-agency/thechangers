@@ -42,5 +42,6 @@
     "eslint-webpack-plugin": "^4.0.1",
     "gatsby-plugin-eslint": "^4.0.4",
     "prettier": "^3.0.3"
-  }
+  },
+  "packageManager": "yarn@4.0.0"
 }
