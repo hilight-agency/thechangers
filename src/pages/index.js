@@ -37,9 +37,8 @@ const IndexPage = () => {
             </a>
           </div>
           <div
-            className='flex-1 text-center font-serif uppercase text-sm'
+            className='flex-shrink text-center font-serif uppercase text-sm cursor-pointer'
             onClick={() => {
-              console.log(Math.floor(window.scrollY / 1000));
               gsap &&
                 window &&
                 gsap.to(window, {
