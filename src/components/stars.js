@@ -14,7 +14,7 @@ export default function Stars() {
         className='w-full h-screen'
         {...props}
       >
-        <g className='fullmap' ref={ref}>
+        <g className='fullmap' ref={ref} style={{ display: show ? 'initial' : 'none' }}>
           <g className='Stars'>
             <Tween
               playState={show ? PlayState.play : PlayState.stop}

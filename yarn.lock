@@ -1712,17 +1712,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/gabarito@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "@fontsource-variable/gabarito@npm:5.0.1"
+  checksum: 92a2244ccf11fbf0b8adbe39fadd8ad760dfbadb4121770a9e6a47d15b4398a991574276c1edc669430c0ceb10c631141e3adf73ec4765d0b31cb0a450cd64da
+  languageName: node
+  linkType: hard
+
 "@fontsource/habibi@npm:^5.0.8":
   version: 5.0.8
   resolution: "@fontsource/habibi@npm:5.0.8"
   checksum: f2753ff0635fad87f7c834a2a13d922a82b0a55437c8bc57e0590709562d967521e5abbac55d59ad508a39d85a706ba09e0223918d0ecdf0fa3cbfd0fe0a0c78
-  languageName: node
-  linkType: hard
-
-"@fontsource/inclusive-sans@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@fontsource/inclusive-sans@npm:5.0.1"
-  checksum: 31a06664f2c42a0511aaace37f5fc36ffcaab09f6f43e3e1fa033281aa7ac8ef104ffef33f89f5c069fe80ea3cd11cca4a89e86ec099168cdaaf2aebf0e23e09
   languageName: node
   linkType: hard
 
@@ -14196,8 +14196,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "the-changers@workspace:."
   dependencies:
+    "@fontsource-variable/gabarito": "npm:^5.0.1"
     "@fontsource/habibi": "npm:^5.0.8"
-    "@fontsource/inclusive-sans": "npm:^5.0.1"
     "@react-three/drei": "npm:^9.88.2"
     "@react-three/fiber": "npm:^8.14.5"
     autoprefixer: "npm:^10.4.16"

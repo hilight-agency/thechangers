@@ -100,7 +100,6 @@ export default function Section3() {
             ))}
           >
             {texts.map((...params) => {
-              console.log(params);
               return (
                 <>
                   <Tween target={0} duration={10} to={{ opacity: 0 }} />
