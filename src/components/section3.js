@@ -21,7 +21,7 @@ export default function Section3() {
           <br />
         </>
       ),
-      class: 'text-left relative bottom-[-100%]',
+      class: 'text-left relative bottom-[-94%]',
       points: {
         from: '-100%',
         toOpacity: '-101%',
