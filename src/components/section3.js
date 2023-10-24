@@ -7,6 +7,7 @@ export default function Section3() {
   const setProgress = useSequenceProgressStore((state) => state.setAstronautSq1);
   const texts = [
     {
+      key: 'block1',
       text: (
         <>
           &quot;The Changers&quot;
@@ -30,6 +31,7 @@ export default function Section3() {
       },
     },
     {
+      key: 'block2',
       text: (
         <>
           Venture capitalists and investors
@@ -53,6 +55,7 @@ export default function Section3() {
       },
     },
     {
+      key: 'block3',
       text: (
         <>
           &quot;The Changers&quot; <br />
@@ -77,7 +80,7 @@ export default function Section3() {
       <div id='section3' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
           start='top top'
-          end='bottom center'
+          end='bottom top'
           id='section3scroll'
           pin
           /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
@@ -89,9 +92,9 @@ export default function Section3() {
         >
           <Timeline
             playState='pause'
-            target={texts.map((item, inx) => (
+            target={texts.map((item) => (
               <p
-                key={inx}
+                key={item.key}
                 className={`${item.class} uppercase text-xl font-semibold p-2`}
                 style={{ opacity: 0 }}
               >
@@ -101,7 +104,7 @@ export default function Section3() {
           >
             {texts.map((...params) => {
               return (
-                <>
+                <React.Fragment key={params[0]?.key}>
                   <Tween target={0} duration={10} to={{ opacity: 0 }} />
                   <Tween
                     from={{ y: params[0]?.points.from }}
@@ -116,7 +119,7 @@ export default function Section3() {
                     target={params[1]}
                   />
                   <Tween to={{ display: 'none' }} duration={0} target={params[1]} />
-                </>
+                </React.Fragment>
               );
             })}
           </Timeline>
