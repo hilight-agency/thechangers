@@ -1,5 +1,5 @@
 import './src/styles/global.css';
-import '@fontsource/inclusive-sans';
+import '@fontsource-variable/gabarito';
 import '@fontsource/habibi';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { gsap } from 'gsap';
