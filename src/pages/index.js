@@ -3,6 +3,7 @@ import Section1 from '../components/section1';
 import Section2 from '../components/section2';
 import Section3 from '../components/section3';
 import Stars from '../components/stars';
+import { gsap } from 'gsap';
 const InstIcon = () => (
   <svg xmlns='http://www.w3.org/2000/svg' width='39' height='39' viewBox='0 0 39 39' fill='none'>
     <g clipPath='url(#clip0_5_4)'>
@@ -35,7 +36,21 @@ const IndexPage = () => {
               <InstIcon />
             </a>
           </div>
-          <div className='flex-1 text-center font-serif uppercase text-sm'>The changers</div>
+          <div
+            className='flex-1 text-center font-serif uppercase text-sm'
+            onClick={() => {
+              console.log(Math.floor(window.scrollY / 1000));
+              gsap &&
+                window &&
+                gsap.to(window, {
+                  scrollTo: 0,
+                  duration: Math.floor(window.scrollY / (window.innerHeight * 2)) || 1,
+                  ease: 'power2.inOut',
+                });
+            }}
+          >
+            The changers
+          </div>
           <div className='flex-1'>&nbsp;</div>
         </div>
       </div>
