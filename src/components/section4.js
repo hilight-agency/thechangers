@@ -38,12 +38,13 @@ export default function Section4() {
           <Timeline
             playState='pause'
             target={
-              <h1
-                className={`uppercase text-2xl font-semibold p-2 relative top-[25%]`}
+              <div
+                className={`uppercase text-2xl font-semibold p-2 relative top-[25%] text-center w-full`}
                 style={{ opacity: 0 }}
               >
-                THERE WILL BE more than
-              </h1>
+                THERE WILL BE
+                <br /> more than
+              </div>
             }
           >
             <>
