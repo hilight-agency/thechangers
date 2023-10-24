@@ -23,10 +23,7 @@ export default function Section4() {
 
   return (
     <React.Fragment>
-      <div
-        id='section4'
-        className='w-full h-screen flex flex-col items-center justify-center relative z-40'
-      >
+      <div id='section4' className='w-full h-screen flex flex-col items-center relative z-40'>
         <ScrollTrigger
           start='top top'
           end='bottom top'
@@ -41,7 +38,10 @@ export default function Section4() {
           <Timeline
             playState='pause'
             target={
-              <h1 className={`uppercase text-2xl font-semibold p-2`} style={{ opacity: 0 }}>
+              <h1
+                className={`uppercase text-2xl font-semibold p-2 relative pt-[64%]`}
+                style={{ opacity: 0 }}
+              >
                 THERE WILL BE more than
               </h1>
             }

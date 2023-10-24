@@ -22,7 +22,7 @@ export default function Section3() {
           <br />
         </>
       ),
-      class: 'text-left relative bottom-[-94%]',
+      class: 'text-left relative bottom-[-100%] pb-[48px]',
       points: {
         from: '-100%',
         toOpacity: '-101%',
@@ -46,7 +46,7 @@ export default function Section3() {
           partnerships.
         </>
       ),
-      class: 'text-right relative top-0',
+      class: 'text-right relative top-0 pt-[48px]',
       points: {
         from: '18%',
         toOpacity: '17%',
