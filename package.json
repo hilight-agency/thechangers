@@ -15,8 +15,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource-variable/gabarito": "^5.0.1",
     "@fontsource/habibi": "^5.0.8",
-    "@fontsource/inclusive-sans": "^5.0.1",
     "@react-three/drei": "^9.88.2",
     "@react-three/fiber": "^8.14.5",
     "autoprefixer": "^10.4.16",

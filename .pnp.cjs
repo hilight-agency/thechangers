@@ -26,8 +26,8 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@fontsource-variable/gabarito", "npm:5.0.1"],\
           ["@fontsource/habibi", "npm:5.0.8"],\
-          ["@fontsource/inclusive-sans", "npm:5.0.1"],\
           ["@react-three/drei", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.88.5"],\
           ["@react-three/fiber", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:8.15.5"],\
           ["autoprefixer", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:10.4.16"],\
@@ -3066,20 +3066,20 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@fontsource-variable/gabarito", [\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@fontsource-variable-gabarito-npm-5.0.1-9f9de865c7-10c0.zip/node_modules/@fontsource-variable/gabarito/",\
+        "packageDependencies": [\
+          ["@fontsource-variable/gabarito", "npm:5.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@fontsource/habibi", [\
       ["npm:5.0.8", {\
         "packageLocation": "../../.yarn/berry/cache/@fontsource-habibi-npm-5.0.8-a4d129abca-10c0.zip/node_modules/@fontsource/habibi/",\
         "packageDependencies": [\
           ["@fontsource/habibi", "npm:5.0.8"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@fontsource/inclusive-sans", [\
-      ["npm:5.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/@fontsource-inclusive-sans-npm-5.0.1-8a4e7f31f8-10c0.zip/node_modules/@fontsource/inclusive-sans/",\
-        "packageDependencies": [\
-          ["@fontsource/inclusive-sans", "npm:5.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19023,8 +19023,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["the-changers", "workspace:."],\
+          ["@fontsource-variable/gabarito", "npm:5.0.1"],\
           ["@fontsource/habibi", "npm:5.0.8"],\
-          ["@fontsource/inclusive-sans", "npm:5.0.1"],\
           ["@react-three/drei", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.88.5"],\
           ["@react-three/fiber", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:8.15.5"],\
           ["autoprefixer", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:10.4.16"],\
