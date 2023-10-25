@@ -23,8 +23,7 @@ export default function Timer({ deadline = new Date().toString() }) {
         M: (time / MINUTE) % 60,
         S: (time / SECOND) % 60,
       }).map(([label, value], i, a) => (
-        <>
-          {' '}
+        <React.Fragment key={label + value + i}>
           <div key={label} className=''>
             <div className='flex items-center flex-col'>
               <p>{`${Math.floor(value)}`.padStart(2, '0')}</p>
@@ -32,7 +31,7 @@ export default function Timer({ deadline = new Date().toString() }) {
             </div>
           </div>
           {i !== a.length - 1 && <div className='leading-tight'>:</div>}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
