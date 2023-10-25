@@ -6,4 +6,9 @@ export const useStarsStore = create((set) => ({
     set(() => ({
       show: value,
     })),
+  progress: 0,
+  setProgress: (newvalue) =>
+    set((state) => ({
+      progress: state.progress !== newvalue ? newvalue : state.progress,
+    })),
 }));
