@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
+import { useSequenceProgressStore } from './states/sequencesStore';
 
 export default function Section4() {
+  const setProgress = useSequenceProgressStore((state) => state.setAstronautSq2);
+
   const texts = [
     {
       key: 'attendees',
@@ -34,6 +37,7 @@ export default function Section4() {
           endTrigger={'#section4trigger'}
           trigger={'#section4'}
           scrub
+          onUpdate={(self) => setProgress(self.progress)}
         >
           <Timeline
             playState='pause'
