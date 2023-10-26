@@ -4,6 +4,7 @@ import { useStarsStore } from './states/starsStore';
 
 export default function Section5() {
   const setProgress = useStarsStore((state) => state.setProgress);
+  const setShowConstellations = useStarsStore((state) => state.setShowConstellations);
 
   return (
     <div id='section5' className='w-full h-[700vh] flex flex-col items-center relative z-40'>
@@ -15,6 +16,8 @@ export default function Section5() {
         trigger={'#section5'}
         scrub
         onUpdate={(self) => setProgress(self.progress)}
+        onEnter={() => setShowConstellations(true)}
+        onLeaveBack={() => setShowConstellations(false)}
       ></ScrollTrigger>
     </div>
   );

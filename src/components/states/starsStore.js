@@ -6,6 +6,11 @@ export const useStarsStore = create((set) => ({
     set(() => ({
       show: value,
     })),
+  showConstellations: false,
+  setShowConstellations: (value) =>
+    set(() => ({
+      showConstellations: value,
+    })),
   progress: 0,
   setProgress: (newvalue) =>
     set((state) => ({
