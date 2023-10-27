@@ -7,8 +7,8 @@ export default function Stars() {
     const progress = useStarsStore((state) => state.progress);
     const show = useStarsStore((state) => state.show);
     const [state, setState] = React.useState(0);
-    function asd() {
-      setState(() => Math.abs(1 - this.ratio));
+    function moveView() {
+      setState(() => (1440 / 4) * (this.vars.label - 1) + Math.abs(1 - this.ratio) * (1440 / 4));
     }
     const showConstellations = useStarsStore((state) => state.showConstellations);
     const Constellations = [
@@ -64,7 +64,7 @@ export default function Stars() {
       </g>,
       <g className='health_wellbeing' key={'health_wellbeing'}>
         <Timeline>
-          <Tween onUpdate={asd} label={1} duration={1} />
+          <Tween onUpdate={moveView} label={1} duration={1} />
           <g stroke='#fff' strokeOpacity='.8' className='health_line 1'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
               <path d='M581.01 334.3h54.4' className='Line7' />
@@ -124,6 +124,7 @@ export default function Stars() {
       </g>,
       <g className='Startups_hubs' key={'Startups_hubs'}>
         <Timeline>
+          <Tween onUpdate={moveView} label={2} duration={1} />
           <g stroke='#fff' className='startups_lines'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
               <path d='m1102.8 268.645-26.02 35.926' className='Line13' />
@@ -238,12 +239,13 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='new_generation' key={'new_generation'} opacity={0}>
+      <g className='new_generation' key={'new_generation'}>
         <Timeline>
+          <Tween onUpdate={moveView} label={3} duration={1} />
           <g stroke='#fff' className='new_gen lines'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
               <path d='M1332.94 367.442h70.12' className='Line4' />
-              <path strokeOpacity='.6' d='m1333.37 367.68 70.11 114.087' className='Line3' />
+              <path d='m1333.37 367.68 70.11 114.087' className='Line3' />
               <path d='m1332.52 481.767 70.11-114.087' className='Line2' />
               <path d='M1332.94 481.529h70.12' className='Line1' />
             </Tween>
@@ -3534,7 +3536,7 @@ export default function Stars() {
         ref={ref}
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
-        viewBox={`${0 + 400 * (state || 0)} 0 1440 1024`}
+        viewBox={`${state} 0 1440 1024`}
         preserveAspectRatio='xMinYMid slice'
         className='w-full h-screen'
         {...props}
