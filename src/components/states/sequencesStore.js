@@ -9,4 +9,9 @@ export const useSequenceProgressStore = create((set) => ({
     set((state) => ({
       astronautSq1: state.astronautSq1 !== newvalue ? newvalue : state.astronautSq1,
     })),
+  astronautSq2: 0,
+  setAstronautSq2: (newvalue) =>
+    set((state) => ({
+      astronautSq2: state.astronautSq2 !== newvalue ? newvalue : state.astronautSq2,
+    })),
 }));

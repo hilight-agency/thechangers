@@ -7,5 +7,8 @@ module.exports = {
     title: `The Changers`,
     siteUrl: `https://www.yourdomain.tld`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: ['gatsby-plugin-postcss', 'gatsby-plugin-eslint'],
 };
