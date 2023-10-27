@@ -7,7 +7,7 @@ export default function Section5() {
   const setShowConstellations = useStarsStore((state) => state.setShowConstellations);
 
   return (
-    <div id='section5' className='w-full h-[700vh] flex flex-col items-center relative z-40'>
+    <div id='section5' className='w-full h-[700vh] flex flex-col items-center relative z-10'>
       <ScrollTrigger
         start='top top'
         end='bottom top'

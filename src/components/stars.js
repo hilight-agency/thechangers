@@ -4,9 +4,13 @@ import gsap from 'gsap';
 import { useStarsStore } from './states/starsStore';
 export default function Stars() {
   const SVG = React.forwardRef((props, ref) => {
-    const show = useStarsStore((state) => state.show);
-    const showConstellations = useStarsStore((state) => state.showConstellations);
     const progress = useStarsStore((state) => state.progress);
+    const show = useStarsStore((state) => state.show);
+    const [state, setState] = React.useState(0);
+    function asd() {
+      setState(() => Math.abs(1 - this.ratio));
+    }
+    const showConstellations = useStarsStore((state) => state.showConstellations);
     const Constellations = [
       <g className='economic_finance' key={'economic_finance'}>
         <Timeline>
@@ -60,6 +64,7 @@ export default function Stars() {
       </g>,
       <g className='health_wellbeing' key={'health_wellbeing'}>
         <Timeline>
+          <Tween onUpdate={asd} label={1} duration={1} />
           <g stroke='#fff' strokeOpacity='.8' className='health_line 1'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
               <path d='M581.01 334.3h54.4' className='Line7' />
@@ -389,7 +394,7 @@ export default function Stars() {
         cy='278.2'
         r='5'
         className='Ellipse7'
-        key='Ellipse8_health_stars'
+        key='Ellipse7_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -398,7 +403,7 @@ export default function Stars() {
         cy='335.2'
         r='5'
         className='Ellipse6'
-        key='Ellipse8_health_stars'
+        key='Ellipse6_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -407,7 +412,7 @@ export default function Stars() {
         cy='378.2'
         r='5'
         className='Ellipse5'
-        key='Ellipse8_health_stars'
+        key='Ellipse5_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -416,7 +421,7 @@ export default function Stars() {
         cy='314.2'
         r='5'
         className='Ellipse4'
-        key='Ellipse8_health_stars'
+        key='Ellipse4_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -425,7 +430,7 @@ export default function Stars() {
         cy='336.2'
         r='5'
         className='Ellipse3'
-        key='Ellipse8_health_stars'
+        key='Ellipse3_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -434,7 +439,7 @@ export default function Stars() {
         cy='336.2'
         r='5'
         className='Ellipse2'
-        key='Ellipse8_health_stars'
+        key='Ellipse2_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -443,7 +448,7 @@ export default function Stars() {
         cy='351.2'
         r='5'
         className='Ellipse1'
-        key='Ellipse8_health_stars'
+        key='Ellipse1_health_stars'
       />,
       <circle
         fill='#D9D9D9'
@@ -3529,7 +3534,7 @@ export default function Stars() {
         ref={ref}
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
-        viewBox='0 0 1440 1024'
+        viewBox={`${0 + 400 * (state || 0)} 0 1440 1024`}
         preserveAspectRatio='xMinYMid slice'
         className='w-full h-screen'
         {...props}
@@ -3558,7 +3563,6 @@ export default function Stars() {
             >
               {constellationStars.map((item) => item)}
             </Tween>
-
             <Timeline
               totalProgress={progress}
               playState={PlayState.pause}
