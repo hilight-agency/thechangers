@@ -79,6 +79,7 @@ export default function Section4() {
                 </Timeline>
               </div>
               <Tween to={{ opacity: 0 }} duration={10} target={0} />
+              <Tween to={{ opacity: 0 }} duration={100} target={0} />
             </>
           </Timeline>
         </ScrollTrigger>
