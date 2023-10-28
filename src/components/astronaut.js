@@ -20,12 +20,14 @@ export default function Astronaut() {
             opacity: progress1 < 1 ? progress1 * 10 : 1,
           }}
         >
-          <Sequence
-            ref={seqref}
-            progress={progress1 * 0.85 + progress2 * 0.15}
-            array={cosmosqArr}
-            className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
-          />
+          {progress1 * 0.85 + progress2 * 0.15 < 1 && (
+            <Sequence
+              ref={seqref}
+              progress={progress1 * 0.85 + progress2 * 0.15}
+              array={cosmosqArr}
+              className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
+            />
+          )}
         </div>
       }
     ></Timeline>

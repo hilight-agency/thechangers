@@ -13,7 +13,7 @@ export default function Section5() {
           start='top top'
           end='bottom bottom'
           id='section5scroll'
-          markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }}
+          /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           trigger={'#section5'}
           scrub
           onUpdate={(self) => setProgress(self.progress)}

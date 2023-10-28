@@ -21,7 +21,7 @@ export default function Section1() {
         className={`w-full h-screen fixed top-0 left-0`}
         style={{ opacity: progress < 0.85 ? 1 : 5 - progress / 0.2 }}
       >
-        <Sequence ref={seqref} progress={progress} array={mainsqArr} />
+        {progress < 1 && <Sequence ref={seqref} progress={progress} array={mainsqArr} />}
       </div>
       <div id='section1trigger' className='w-full h-[200vh]'></div>
       <section
