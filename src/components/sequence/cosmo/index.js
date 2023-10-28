@@ -1,4 +1,3 @@
-import A0 from './cosmo001.webp';
 import A1 from './cosmo001.webp';
 import A2 from './cosmo002.webp';
 import A3 from './cosmo003.webp';
@@ -145,9 +144,18 @@ import A130 from './cosmo130.webp';
 import A131 from './cosmo131.webp';
 import A132 from './cosmo132.webp';
 import A133 from './cosmo133.webp';
+import A134 from './cosmo134.webp';
+import A135 from './cosmo135.webp';
+import A136 from './cosmo136.webp';
+import A137 from './cosmo137.webp';
+import A138 from './cosmo138.webp';
+import A139 from './cosmo139.webp';
+
+import A140 from './cosmo140.webp';
+import A141 from './cosmo141.webp';
+import A142 from './cosmo142.webp';
 
 export const CosmoSq = Array.of(
-  A0,
   A1,
   A2,
   A3,
@@ -294,4 +302,14 @@ export const CosmoSq = Array.of(
   A131,
   A132,
   A133,
+  A134,
+  A135,
+  A136,
+  A137,
+  A138,
+  A139,
+
+  A140,
+  A141,
+  A142,
 );

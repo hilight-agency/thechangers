@@ -3,8 +3,6 @@ import { CosmoSq } from './cosmo/index';
 import { useImage } from '../../hooks/useImage';
 
 export const MainSqArray = () => {
-  const [AA0, AA0S] = useImage(MainSq[0]);
-  const [AA1, AA1S] = useImage(MainSq[1]);
   const [AA2, AA2S] = useImage(MainSq[2]);
   const [AA3, AA3S] = useImage(MainSq[3]);
   const [AA4, AA4S] = useImage(MainSq[4]);
@@ -199,8 +197,6 @@ export const MainSqArray = () => {
   const [AA176, AA176S] = useImage(MainSq[176]);
 
   const newImages = Array.of(
-    [AA0, AA0S],
-    [AA1, AA1S],
     [AA2, AA2S],
     [AA3, AA3S],
     [AA4, AA4S],
@@ -395,7 +391,6 @@ export const MainSqArray = () => {
   return newImages;
 };
 export const CosmoSqArray = () => {
-  const [AA0, AA0S] = useImage(CosmoSq[0]);
   const [AA1, AA1S] = useImage(CosmoSq[1]);
   const [AA2, AA2S] = useImage(CosmoSq[2]);
   const [AA3, AA3S] = useImage(CosmoSq[3]);
@@ -542,9 +537,18 @@ export const CosmoSqArray = () => {
   const [AA131, AA131S] = useImage(CosmoSq[131]);
   const [AA132, AA132S] = useImage(CosmoSq[132]);
   const [AA133, AA133S] = useImage(CosmoSq[133]);
+  const [AA134, AA134S] = useImage(CosmoSq[134]);
+  const [AA135, AA135S] = useImage(CosmoSq[135]);
+  const [AA136, AA136S] = useImage(CosmoSq[136]);
+  const [AA137, AA137S] = useImage(CosmoSq[137]);
+  const [AA138, AA138S] = useImage(CosmoSq[138]);
+  const [AA139, AA139S] = useImage(CosmoSq[139]);
+
+  const [AA140, AA140S] = useImage(CosmoSq[140]);
+  const [AA141, AA141S] = useImage(CosmoSq[141]);
+  const [AA142, AA142S] = useImage(CosmoSq[142]);
 
   const newImages = Array.of(
-    [AA0, AA0S],
     [AA1, AA1S],
     [AA2, AA2S],
     [AA3, AA3S],
@@ -689,6 +693,16 @@ export const CosmoSqArray = () => {
     [AA131, AA131S],
     [AA132, AA132S],
     [AA133, AA133S],
+    [AA134, AA134S],
+    [AA135, AA135S],
+    [AA136, AA136S],
+    [AA137, AA137S],
+    [AA138, AA138S],
+    [AA139, AA139S],
+
+    [AA140, AA140S],
+    [AA141, AA141S],
+    [AA142, AA142S],
   );
   return newImages;
 };

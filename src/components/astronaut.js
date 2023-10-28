@@ -2,7 +2,7 @@ import * as React from 'react';
 import Sequence from './sequence/ImageSequence';
 import { useSequenceProgressStore } from './states/sequencesStore';
 import { CosmoSqArray } from './sequence/ImageArray';
-import { Tween, Timeline, PlayState } from 'react-gsap';
+import { Timeline, PlayState } from 'react-gsap';
 export default function Astronaut() {
   const cosmosqArr = CosmoSqArray();
   const seqref = React.useRef();
@@ -22,15 +22,12 @@ export default function Astronaut() {
         >
           <Sequence
             ref={seqref}
-            progress={progress1}
+            progress={progress1 * 0.85 + progress2 * 0.15}
             array={cosmosqArr}
             className={'h-full w-full bg-contain bg-bottom bg-no-repeat'}
           />
         </div>
       }
-    >
-      <Tween from={{ y: '0%' }} to={{ y: '50%' }} ease={'power2.in'}></Tween>
-      <Tween from={{ display: 'block' }} to={{ display: 'none' }} duration={0}></Tween>
-    </Timeline>
+    ></Timeline>
   );
 }
