@@ -1,5 +1,3 @@
-import A0 from './mainsq000.webp';
-import A1 from './mainsq001.webp';
 import A2 from './mainsq002.webp';
 import A3 from './mainsq003.webp';
 import A4 from './mainsq004.webp';
@@ -194,8 +192,6 @@ import A175 from './mainsq175.webp';
 import A176 from './mainsq176.webp';
 
 export const MainSq = Array.of(
-  A0,
-  A1,
   A2,
   A3,
   A4,
