@@ -3,6 +3,7 @@ import { CosmoSq } from './cosmo/index';
 import { useImage } from '../../hooks/useImage';
 
 export const MainSqArray = () => {
+  const [AA1, AA1S] = useImage(MainSq[1]);
   const [AA2, AA2S] = useImage(MainSq[2]);
   const [AA3, AA3S] = useImage(MainSq[3]);
   const [AA4, AA4S] = useImage(MainSq[4]);
@@ -194,9 +195,9 @@ export const MainSqArray = () => {
   const [AA173, AA173S] = useImage(MainSq[173]);
   const [AA174, AA174S] = useImage(MainSq[174]);
   const [AA175, AA175S] = useImage(MainSq[175]);
-  const [AA176, AA176S] = useImage(MainSq[176]);
 
   const newImages = Array.of(
+    [AA1, AA1S],
     [AA2, AA2S],
     [AA3, AA3S],
     [AA4, AA4S],
@@ -386,7 +387,6 @@ export const MainSqArray = () => {
     [AA173, AA173S],
     [AA174, AA174S],
     [AA175, AA175S],
-    [AA176, AA176S],
   );
   return newImages;
 };
