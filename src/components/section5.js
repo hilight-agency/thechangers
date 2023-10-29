@@ -21,7 +21,6 @@ export default function Section5() {
           onLeaveBack={() => setShowConstellations(false)}
         ></ScrollTrigger>
       </div>
-      <div className='w-full h-screen'></div>
     </>
   );
 }
