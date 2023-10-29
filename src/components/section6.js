@@ -92,24 +92,28 @@ export default function Section6() {
           markers={{ fontSize: '12px', startColor: 'green', endColor: 'green' }}
           scrub
         >
-          <div className='flex flex-col'>
+          <div className='flex flex-col w-screen'>
             <Timeline>
-              <Tween from={{ y: '100%' }} to={{ y: '0' }} duration={2}>
-                <Img0 />
-              </Tween>
-              <Tween duration={1}>{null}</Tween>
-              <Tween from={{ y: '100%' }} to={{ y: '0' }} duration={2}>
-                <Img1 />
-              </Tween>
-              <Tween duration={1}>{null}</Tween>
-              <Tween from={{ y: '100%' }} to={{ y: '0' }} duration={2}>
-                <Img2 />
-              </Tween>
-              <Tween duration={1}>{null}</Tween>
-              <Tween from={{ y: '100%' }} to={{ y: '0' }} duration={2}>
-                <Img3 />
-              </Tween>
-              <Tween duration={1}>{null}</Tween>
+              <Timeline target={<Img0 />}>
+                <Tween duration={2} from={{ y: '100%' }} to={{ y: '0' }} />
+                <Tween duration={1} />
+                <Tween duration={2} from={{ x: '0' }} to={{ x: '-100%' }} />
+              </Timeline>
+              <Timeline target={<Img1 />}>
+                <Tween duration={2} from={{ x: '100%' }} to={{ x: '0' }} />
+                <Tween duration={1} />
+                <Tween duration={2} from={{ x: '0' }} to={{ x: '-100%' }} />
+              </Timeline>
+              <Timeline target={<Img2 />}>
+                <Tween duration={2} from={{ x: '100%' }} to={{ x: '0' }} />
+                <Tween duration={1} />
+                <Tween duration={2} from={{ x: '0' }} to={{ x: '-100%' }} />
+              </Timeline>
+              <Timeline target={<Img3 />}>
+                <Tween duration={2} from={{ x: '100%' }} to={{ x: '0' }} />
+                <Tween duration={1} />
+                <Tween duration={2} from={{ x: '0' }} to={{ x: '-100%' }} />
+              </Timeline>
             </Timeline>
           </div>
           {/*           <Timeline target={targets}>
