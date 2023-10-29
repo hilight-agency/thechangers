@@ -16,9 +16,14 @@ export default function Section5() {
           /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           trigger={'#section5'}
           scrub
-          onUpdate={(self) => setProgress(self.progress)}
-          onEnter={() => setShowConstellations(true)}
-          onLeaveBack={() => setShowConstellations(false)}
+          onUpdate={(self) => {
+            setProgress(self.progress);
+            if (self.progress && self.progress < 1) {
+              setShowConstellations(true);
+            } else {
+              setShowConstellations(false);
+            }
+          }}
         ></ScrollTrigger>
       </div>
     </>

@@ -12,7 +12,11 @@ export default function Stars() {
     }
     const showConstellations = useStarsStore((state) => state.showConstellations);
     const Constellations = [
-      <g className='economic_finance' key={'economic_finance'}>
+      <g
+        className='economic_finance'
+        key={'economic_finance'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <g className='finance_line1'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
@@ -37,7 +41,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='sustainability' key={'sustainability'}>
+      <g
+        className='sustainability'
+        key={'sustainability'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <g stroke='#fff' className='sustainability_lines'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
@@ -62,7 +70,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='health_wellbeing' key={'health_wellbeing'}>
+      <g
+        className='health_wellbeing'
+        key={'health_wellbeing'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <Tween onUpdate={moveView} label={1} duration={1} />
           <g stroke='#fff' strokeOpacity='.8' className='health_line 1'>
@@ -90,7 +102,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='technology_innovations' key={'technology_innovations'}>
+      <g
+        className='technology_innovations'
+        key={'technology_innovations'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <g stroke='#fff' strokeOpacity='.8' className='technology_lines'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
@@ -122,7 +138,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='Startups_hubs' key={'Startups_hubs'}>
+      <g
+        className='Startups_hubs'
+        key={'Startups_hubs'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <Tween onUpdate={moveView} label={2} duration={1} />
           <g stroke='#fff' className='startups_lines'>
@@ -156,7 +176,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='education_development' key={'education_development'}>
+      <g
+        className='education_development'
+        key={'education_development'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <g className='education_develop lines'>
             <Tween from={{ svgDraw: 0 }} to={{ svgDraw: 1 }}>
@@ -239,7 +263,11 @@ export default function Stars() {
           </Tween>
         </Timeline>
       </g>,
-      <g className='new_generation' key={'new_generation'}>
+      <g
+        className='new_generation'
+        key={'new_generation'}
+        style={{ opacity: showConstellations ? 1 : 0 }}
+      >
         <Timeline>
           <Tween onUpdate={moveView} label={3} duration={1} />
           <g stroke='#fff' className='new_gen lines'>
