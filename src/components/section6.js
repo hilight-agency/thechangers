@@ -15,11 +15,17 @@ export default function Section6() {
   }
   function moveStarsUp() {
     if (typeof window !== 'undefined' && window.innerHeight)
-      setMovey(Math.abs(1 - this.ratio) * window.innerHeight);
+      setMovey(Math.abs(1 - this.ratio * 0.5 - (this.vars.mypart ? 0.5 : 0)) * window.innerHeight);
   }
   const Img0 = React.forwardRef((props, ref) => (
     <Timeline>
-      <Tween duration={3} from={{ y: '100%' }} to={{ y: '0' }} onUpdate={moveStarsDown}>
+      <Tween
+        duration={3}
+        from={{ y: '100%' }}
+        to={{ y: '0' }}
+        onUpdate={moveStarsDown}
+        ease='linear'
+      >
         <img
           ref={ref}
           className='h-screen w-full relative object-cover z-10'
@@ -129,7 +135,7 @@ export default function Section6() {
           start='top bottom'
           end='bottom top'
           id='section5scroll'
-          markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }}
+          /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           trigger={'#section6text'}
           scrub
         >
@@ -189,15 +195,21 @@ export default function Section6() {
               </div>
             }
           >
-            <Timeline onUpdate={moveStarsUp}>
-              {' '}
-              <Tween duration={2} from={{ y: '0' }} to={{ y: '50%' }} />
-              <Tween
-                duration={2}
-                from={{ y: '50%', opacity: '1' }}
-                to={{ y: '100%', opacity: '0' }}
-              />
-            </Timeline>
+            <Tween
+              duration={2}
+              from={{ y: '0' }}
+              to={{ y: '50%' }}
+              onUpdate={moveStarsUp}
+              ease='linear'
+            />
+            <Tween
+              ease='linear'
+              mypart
+              onUpdate={moveStarsUp}
+              duration={2}
+              from={{ y: '50%', opacity: '1' }}
+              to={{ y: '100%', opacity: '0' }}
+            />
           </Timeline>
         </ScrollTrigger>
       </div>
