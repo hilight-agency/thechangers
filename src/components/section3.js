@@ -15,11 +15,8 @@ export default function Section3() {
           is a unique event <br />
           that gathers investors, <br />
           decision makers, and celebrities from all over the world at the Meydan Hotel. It provides
-          <br />
           opportunities for entrepreneurs, companies and influencers, including access to
-          <br />
           politicians and entertainment stars.
-          <br />
         </>
       ),
       class: 'text-left relative bottom-[-100%] pb-[48px]',
@@ -95,7 +92,7 @@ export default function Section3() {
             target={texts.map((item) => (
               <p
                 key={item.key}
-                className={`${item.class} uppercase text-xl font-semibold p-4`}
+                className={`${item.class} uppercase text-lg font-semibold p-4`}
                 style={{ opacity: 0 }}
               >
                 {item.text}
