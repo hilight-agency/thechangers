@@ -10,12 +10,11 @@ export default function Section6() {
   const setMovey = useStarsStore((state) => state.setMovey);
 
   function moveStarsDown() {
-    if (typeof window !== 'undefined' && window.innerHeight && this.ratio != 1)
-      setMovey(this.ratio * window.innerHeight);
+    if (typeof window !== 'undefined' && this.ratio != 1) setMovey(this.ratio * 1024);
   }
   function moveStarsUp() {
-    if (typeof window !== 'undefined' && window.innerHeight && this.ratio != 1)
-      setMovey(Math.abs(1 - this.ratio * 0.5 - (this.vars.mypart ? 0.5 : 0)) * window.innerHeight);
+    if (typeof window !== 'undefined' && this.ratio != 1)
+      setMovey(Math.abs(1 - this.ratio * 0.5 - (this.vars.mypart ? 0.5 : 0)) * 1024);
   }
   const Img0 = React.forwardRef((props, ref) => (
     <Timeline>
