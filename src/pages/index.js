@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Header from '../components/header';
+import Stars from '../components/stars';
 import Section1 from '../components/section1';
 import Section2 from '../components/section2';
 import Section3 from '../components/section3';
 import Section4 from '../components/section4';
 import Section5 from '../components/section5';
-import Stars from '../components/stars';
+import Section6 from '../components/section6';
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
       <div className='h-screen'></div>
     </div>
   );
