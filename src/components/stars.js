@@ -6,6 +6,7 @@ export default function Stars() {
   const SVG = React.forwardRef((props, ref) => {
     const progress = useStarsStore((state) => state.progress);
     const show = useStarsStore((state) => state.show);
+    const movey = useStarsStore((state) => state.movey);
     const [state, setState] = React.useState(0);
     function moveView() {
       setState(() => (1440 / 4) * (this.vars.label - 1) + Math.abs(1 - this.ratio) * (1440 / 4));
@@ -3564,7 +3565,7 @@ export default function Stars() {
         ref={ref}
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
-        viewBox={`${state} 0 1440 1024`}
+        viewBox={`${state} ${movey} 1440 1024`}
         preserveAspectRatio='xMinYMid slice'
         className='w-full h-screen'
         {...props}
