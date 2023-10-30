@@ -10,11 +10,11 @@ export default function Section6() {
   const setMovey = useStarsStore((state) => state.setMovey);
 
   function moveStarsDown() {
-    if (typeof window !== 'undefined' && window.innerHeight)
+    if (typeof window !== 'undefined' && window.innerHeight && this.ratio != 1)
       setMovey(this.ratio * window.innerHeight);
   }
   function moveStarsUp() {
-    if (typeof window !== 'undefined' && window.innerHeight)
+    if (typeof window !== 'undefined' && window.innerHeight && this.ratio != 1)
       setMovey(Math.abs(1 - this.ratio * 0.5 - (this.vars.mypart ? 0.5 : 0)) * window.innerHeight);
   }
   const Img0 = React.forwardRef((props, ref) => (
@@ -36,7 +36,12 @@ export default function Section6() {
 
       <Timeline
         target={
-          <div className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-20 bottom-[20%] left-[50%] translate-x-[-50%] opacity-0'>
+          <div
+            className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-20 bottom-[5%] left-[50%] translate-x-[-50%] opacity-0'
+            style={{
+              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
+            }}
+          >
             Abu
             <br />
             dhabi
@@ -62,9 +67,9 @@ export default function Section6() {
       <Timeline
         target={
           <div
-            className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-30 bottom-[20%] left-[50%] translate-x-[-50%] opacity-0'
+            className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-30 bottom-[5%] left-[50%] translate-x-[-50%] opacity-0'
             style={{
-              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
             }}
           >
             SHAR
@@ -91,7 +96,12 @@ export default function Section6() {
       </Tween>
       <Timeline
         target={
-          <div className='uppercase w-[320px] text-[70px] leading-tight text-center absolute z-40 bottom-[20%] left-[50%] translate-x-[-50%] opacity-0'>
+          <div
+            className='uppercase w-[320px] text-[70px] leading-tight text-center absolute z-40 bottom-[5%] left-[50%] translate-x-[-50%] opacity-0'
+            style={{
+              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
+            }}
+          >
             RAS AL
             <br />
             KHAIMAH
@@ -116,7 +126,12 @@ export default function Section6() {
       </Tween>
       <Timeline
         target={
-          <div className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-50 bottom-[20%] left-[50%] translate-x-[-50%] opacity-0'>
+          <div
+            className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-50 bottom-[5%] left-[50%] translate-x-[-50%] opacity-0'
+            style={{
+              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
+            }}
+          >
             DUBAI
           </div>
         }
