@@ -14,7 +14,7 @@ export default function SpeakerItem({ element }) {
       className='w-full h-28 max-h-28 flex flex-row gap-5 px-3 py-1'
       style={{
         background: 'rgba(217, 217, 217, 0.20)',
-        opacity: RoundRight(inview?.entry?.intersectionRatio),
+        opacity: RoundRight(inview?.entry?.intersectionRatio || 0),
       }}
     >
       <div className='flex flex-col items-center justify-center min-w-[78px] min-h-[78px]'>
