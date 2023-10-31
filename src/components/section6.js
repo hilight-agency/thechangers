@@ -27,7 +27,7 @@ export default function Section6() {
       >
         <img
           ref={ref}
-          className='h-screen w-full relative object-cover z-10'
+          className='h-screen w-full relative object-cover z-10 object-top'
           src={AbudhabiPhoto}
           {...props}
         />
@@ -58,7 +58,7 @@ export default function Section6() {
       <Tween duration={3} from={{ x: '100%' }} to={{ x: '0' }}>
         <img
           ref={ref}
-          className='h-screen w-full absolute top-0 object-cover z-20'
+          className='h-screen w-full absolute top-0 object-cover z-20 object-top'
           src={SharjahPhoto}
           {...props}
         />
@@ -88,7 +88,7 @@ export default function Section6() {
       <Tween duration={3} from={{ x: '-100%' }} to={{ x: '0' }}>
         <img
           ref={ref}
-          className='h-screen w-full absolute top-0 object-cover z-30'
+          className='h-screen w-full absolute top-0 object-cover z-30 object-top'
           src={RasAlKhaimahPhoto}
           {...props}
         />
@@ -118,7 +118,7 @@ export default function Section6() {
       <Tween duration={3} from={{ x: '100%' }} to={{ x: '0' }}>
         <img
           ref={ref}
-          className='h-screen w-full absolute top-0 object-cover z-40'
+          className='h-screen w-full absolute top-0 object-cover z-40 object-top'
           src={DubaiiPhoto}
           {...props}
         />
@@ -148,7 +148,7 @@ export default function Section6() {
         <ScrollTrigger
           start='top bottom'
           end='bottom top'
-          id='section5scroll'
+          id='section6scroll'
           /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           trigger={'#section6text'}
           scrub
@@ -156,7 +156,7 @@ export default function Section6() {
           <Timeline>
             <div
               className='w-full h-screen flex flex-col items-center justify-center gap-[52px] fixed top-0 px-3'
-              key='text screen'
+              key='text6_screen'
             >
               <Timeline
                 target={[
@@ -193,10 +193,9 @@ export default function Section6() {
         <ScrollTrigger
           start='top top'
           end='+=500%'
-          id='section6scroll'
+          id='section6scrollimages'
           pin
           trigger='#section6images'
-          markers={{ fontSize: '12px', startColor: 'green', endColor: 'green' }}
           scrub
         >
           <Timeline

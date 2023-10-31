@@ -7,6 +7,7 @@ import Section3 from '../components/section3';
 import Section4 from '../components/section4';
 import Section5 from '../components/section5';
 import Section6 from '../components/section6';
+import Section7 from '../components/section7';
 
 const IndexPage = () => {
   return (
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <Section4 />
       <Section5 />
       <Section6 />
+      <Section7 />
       <div className='h-screen'></div>
     </div>
   );
