@@ -57,7 +57,7 @@ export default function Section7() {
           start='top bottom'
           end='bottom top'
           id='section7scroll'
-          markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }}
+          /* markers={{ fontSize: '12px', startColor: 'white', endColor: 'white' }} */
           trigger={'#section7text'}
           scrub
         >
@@ -118,7 +118,7 @@ export default function Section7() {
       <div id='section7images' className='w-full relative z-40'>
         <ScrollTrigger
           start='top top'
-          end='+=500%'
+          end='+=200%'
           id='section7scrollimages'
           pin
           trigger='#section7images'
