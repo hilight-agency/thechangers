@@ -18,6 +18,7 @@ export default function SpeakerItem({ element, onClick, isOpened }) {
   }, [prog]);
   return (
     <div
+      id={'speakersmall' + element.id}
       ref={inview.ref}
       className={`w-full ${
         isOpened === element.id ? 'h-screen max-h-screen' : 'h-28 max-h-28'

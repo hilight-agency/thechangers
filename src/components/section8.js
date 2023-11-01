@@ -39,12 +39,24 @@ export default function Section8() {
             showStatus={false}
             showIndicators={false}
             showThumbs={false}
-            onClickItem={() =>
+            onClickItem={(item) => {
+              if (window && document) {
+                const el = document.querySelector(`#speakersmall${item}`);
+                const scrolltoy =
+                  el.getBoundingClientRect().top -
+                  document.body.getBoundingClientRect().top +
+                  32 -
+                  window.screen.height / 2;
+                window.scrollTo({
+                  top: scrolltoy,
+                  behavior: 'instant',
+                });
+              }
               setOpened(() => {
                 unlockScroll();
                 return false;
-              })
-            }
+              });
+            }}
             selectedItem={opened || 0}
           >
             {data.items.map((element) => (
