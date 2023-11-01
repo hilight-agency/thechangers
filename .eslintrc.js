@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'prettier/prettier': ['error', { singleQuote: true, jsxSingleQuote: true }],
     'jsx-quotes': ['error', 'prefer-single'],
     'react/display-name': 'off',

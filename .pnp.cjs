@@ -47,6 +47,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:18.2.0"],\
           ["react-gsap", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:3.2.1"],\
+          ["react-intersection-observer", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.5.2"],\
+          ["react-responsive-carousel", "npm:3.2.23"],\
           ["react-scrollmagic", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:2.3.0"],\
           ["tailwindcss", "npm:3.3.3"],\
           ["three", "npm:0.157.0"],\
@@ -7845,6 +7847,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/ci-info-npm-3.9.0-646784ca0e-10c0.zip/node_modules/ci-info/",\
         "packageDependencies": [\
           ["ci-info", "npm:3.9.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["classnames", [\
+      ["npm:2.3.2", {\
+        "packageLocation": "../../.yarn/berry/cache/classnames-npm-2.3.2-d2fdae468d-10c0.zip/node_modules/classnames/",\
+        "packageDependencies": [\
+          ["classnames", "npm:2.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17108,6 +17119,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-easy-swipe", [\
+      ["npm:0.0.21", {\
+        "packageLocation": "../../.yarn/berry/cache/react-easy-swipe-npm-0.0.21-b711aee7dc-10c0.zip/node_modules/react-easy-swipe/",\
+        "packageDependencies": [\
+          ["react-easy-swipe", "npm:0.0.21"],\
+          ["prop-types", "npm:15.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-error-overlay", [\
       ["npm:6.0.11", {\
         "packageLocation": "../../.yarn/berry/cache/react-error-overlay-npm-6.0.11-021cdeaa92-10c0.zip/node_modules/react-error-overlay/",\
@@ -17143,6 +17164,28 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "gsap",\
           "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-intersection-observer", [\
+      ["npm:9.5.2", {\
+        "packageLocation": "../../.yarn/berry/cache/react-intersection-observer-npm-9.5.2-2c006290a0-10c0.zip/node_modules/react-intersection-observer/",\
+        "packageDependencies": [\
+          ["react-intersection-observer", "npm:9.5.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.5.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-intersection-observer-virtual-8a12217246/3/.yarn/berry/cache/react-intersection-observer-npm-9.5.2-2c006290a0-10c0.zip/node_modules/react-intersection-observer/",\
+        "packageDependencies": [\
+          ["react-intersection-observer", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.5.2"],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
           "react"\
         ],\
         "linkType": "HARD"\
@@ -17195,6 +17238,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/react-refresh-npm-0.14.0-78ef5eeb73-10c0.zip/node_modules/react-refresh/",\
         "packageDependencies": [\
           ["react-refresh", "npm:0.14.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-responsive-carousel", [\
+      ["npm:3.2.23", {\
+        "packageLocation": "../../.yarn/berry/cache/react-responsive-carousel-npm-3.2.23-c14eae816a-10c0.zip/node_modules/react-responsive-carousel/",\
+        "packageDependencies": [\
+          ["react-responsive-carousel", "npm:3.2.23"],\
+          ["classnames", "npm:2.3.2"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react-easy-swipe", "npm:0.0.21"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19044,6 +19099,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:18.2.0"],\
           ["react-gsap", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:3.2.1"],\
+          ["react-intersection-observer", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:9.5.2"],\
+          ["react-responsive-carousel", "npm:3.2.23"],\
           ["react-scrollmagic", "virtual:a5322067f9e53d81f9aa3e6cf4ae998ec9c613464f2c873ec3e67a0d0aea8568870065b24d79f23cf7e71ab2b7f9616dbf318c402b18967fbcfb3ad024114cf8#npm:2.3.0"],\
           ["tailwindcss", "npm:3.3.3"],\
           ["three", "npm:0.157.0"],\
