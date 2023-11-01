@@ -6,6 +6,8 @@ html,
 body {
   background-color: black;
   overflow-x: hidden;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
 }
 
 .skeleton {
