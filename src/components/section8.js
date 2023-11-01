@@ -12,7 +12,7 @@ export default function Section8() {
   return (
     <React.Fragment>
       <div
-        className={`w-full p-5 flex flex-col gap-5 ${
+        className={`w-full p-5 flex relative z-50 flex-col gap-5 ${
           opened !== false ? `opacity-0` : `opacity-100`
         } transition-opacity duration-500`}
       >
