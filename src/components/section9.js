@@ -9,7 +9,7 @@ export default function Section9() {
           start='top top'
           end='+=200%'
           id='section9scroll'
-          markers={{ fontSize: '12px', startColor: 'red', endColor: 'red' }}
+          /* markers={{ fontSize: '12px', startColor: 'red', endColor: 'red' }} */
           trigger={'#section9text'}
           scrub
         >
