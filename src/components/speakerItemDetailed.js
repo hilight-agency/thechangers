@@ -10,13 +10,8 @@ export default function SpeakerItemDetailed({ element }) {
         <div className='text-[#FCED9F] uppercase text-xl font-extrabold'>{element.title}</div>
         <div className='uppercase text-xl font-extrabold'>{element.name}</div>
         {element.fulldescr.map((item, i) => (
-          <>
-            <div
-              key={`${element.id}_descr_${i}`}
-              className='uppercase text-base flex-grow flex-shrink-0'
-            >
-              {item.descr}
-            </div>
+          <React.Fragment key={`${element.id}_descr_${i}`}>
+            <div className='uppercase text-base flex-grow flex-shrink-0'>{item.descr}</div>
             <div className='max-h-10 h-10 flex flex-row gap-2'>
               {item.logos.map((logo, j) => (
                 <img
@@ -26,7 +21,7 @@ export default function SpeakerItemDetailed({ element }) {
                 />
               ))}
             </div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

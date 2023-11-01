@@ -29,25 +29,6 @@ export default function Section7() {
           {...props}
         />
       </Tween>
-
-      <Timeline
-        target={
-          <div
-            className='uppercase w-[290px] text-[70px] leading-tight text-center absolute z-20 bottom-[5%] left-[50%] translate-x-[-50%] opacity-0'
-            style={{
-              textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
-            }}
-          >
-            Abu
-            <br />
-            dhabi
-          </div>
-        }
-      >
-        <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} duration={1} />
-        <Tween to={{ opacity: 1 }} duration={2} />
-        <Tween from={{ opacity: 1 }} to={{ opacity: 0 }} duration={1} />
-      </Timeline>
     </Timeline>
   ));
   return (
@@ -131,6 +112,7 @@ export default function Section7() {
               </div>
             }
           >
+            <Tween duration={2} from={{ y: '0' }} to={{ y: '0' }} ease='linear' />
             <Tween
               duration={2}
               from={{ y: '0' }}
