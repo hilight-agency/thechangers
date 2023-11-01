@@ -16,4 +16,8 @@ body {
 }
 .carousel {
   z-index: 100;
+  .slider-wrapper {
+    position: relative;
+    top: 64px;
+  }
 }

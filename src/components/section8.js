@@ -13,8 +13,8 @@ export default function Section8() {
     <React.Fragment>
       <div
         className={`w-full p-5 flex flex-col gap-5 ${
-          opened ? `opacity-0` : `opacity-100`
-        } transition-opacity duration-200`}
+          opened !== false ? `opacity-0` : `opacity-100`
+        } transition-opacity duration-500`}
       >
         {data.items.map((element) => (
           <SpeakerItem
@@ -30,11 +30,11 @@ export default function Section8() {
         ))}
       </div>
       <div
-        className={`p-5 h-screen w-full fixed top-8 ${
-          opened ? `opacity-100 z-50` : `opacity-0`
-        } transition-opacity duration-200`}
+        className={`h-screen w-full fixed top-8 ${
+          opened !== false ? `opacity-100 z-50` : `opacity-0`
+        } transition-opacity duration-500`}
       >
-        {opened && (
+        {opened !== false && (
           <Carousel
             showStatus={false}
             showIndicators={false}
