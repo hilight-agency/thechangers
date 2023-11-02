@@ -1,8 +1,19 @@
 import * as React from 'react';
 import { ScrollTrigger, Timeline, Tween } from 'react-gsap';
 import { useSequenceProgressStore } from './states/sequencesStore';
+import { gsap } from 'gsap';
 
 export default function Section4() {
+  React.useEffect(() => {
+    gsap.to('#section4 .coloredtext', {
+      keyframes: {
+        color: ['#fcf1a6', '#fad3a1', '#fcf1a6', '#fcd3ac', '#c1786b'],
+      },
+      repeat: -1,
+      yoyo: true,
+      duration: 3,
+    });
+  });
   const setProgress = useSequenceProgressStore((state) => state.setAstronautSq2);
 
   const texts = [
@@ -51,36 +62,35 @@ export default function Section4() {
               </div>
             }
           >
-            <>
-              <Tween to={{ opacity: 1 }} duration={10} target={0} />
-              <div className='relative w-full text-center top-[25%]'>
-                <Timeline
-                  target={texts.map((item, index) => (
-                    <p
-                      key={item.key}
-                      className={`uppercase w-full text-xl font-semibold p-2 ${
-                        index !== 0 ? 'absolute' : 'relative'
-                      }`}
-                      style={{ opacity: 0, top: 0 }}
-                    >
-                      {item.text}
-                    </p>
-                  ))}
-                >
-                  {texts.map((...params) => {
-                    return (
-                      <React.Fragment key={params[0]?.key}>
-                        <Tween to={{ opacity: 1 }} duration={10} target={params[1]} />
-                        <Tween to={{ opacity: 1 }} duration={30} target={params[1]} />
-                        <Tween to={{ opacity: 0 }} duration={10} target={params[1]} />
-                      </React.Fragment>
-                    );
-                  })}
-                </Timeline>
-              </div>
-              <Tween to={{ opacity: 0 }} duration={10} target={0} />
-              <Tween to={{ opacity: 0 }} duration={100} target={0} />
-            </>
+            <Tween to={{ opacity: 1 }} duration={10} target={0} />
+            <Tween to={{ y: '-50%' }} duration={10} target={0} />
+            <div className='relative w-full text-center coloredtext top-[25%]'>
+              <Timeline
+                target={texts.map((item, index) => (
+                  <p
+                    key={item.key}
+                    className={`uppercase w-full text-xl font-semibold p-2 ${
+                      index !== 0 ? 'absolute' : 'relative'
+                    }`}
+                    style={{ opacity: 0, top: 0 }}
+                  >
+                    {item.text}
+                  </p>
+                ))}
+              >
+                {texts.map((...params) => {
+                  return (
+                    <React.Fragment key={params[0]?.key}>
+                      <Tween to={{ opacity: 1 }} duration={10} target={params[1]} />
+                      <Tween to={{ opacity: 1 }} duration={30} target={params[1]} />
+                      <Tween to={{ opacity: 0 }} duration={10} target={params[1]} />
+                    </React.Fragment>
+                  );
+                })}
+              </Timeline>
+            </div>
+            <Tween to={{ opacity: 0 }} duration={10} target={0} />
+            <Tween to={{ opacity: 0 }} duration={100} target={0} />
           </Timeline>
         </ScrollTrigger>
       </div>
