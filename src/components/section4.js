@@ -31,7 +31,11 @@ export default function Section4() {
     },
     {
       key: 'funds-investors',
-      text: '15 Funds & Investors hubs',
+      text: (
+        <span>
+          15 Funds &<br /> Investors hubs
+        </span>
+      ),
     },
   ];
 
@@ -62,17 +66,16 @@ export default function Section4() {
               </div>
             }
           >
-            <Tween to={{ opacity: 1 }} duration={10} target={0} />
-            <Tween to={{ y: '-50%' }} duration={10} target={0} />
-            <div className='relative w-full text-center coloredtext top-[25%]'>
+            <Tween to={{ opacity: 1, y: '-50%' }} duration={40} target={0} />
+            <div className='relative text-2xl w-full text-center coloredtext top-[25%]'>
               <Timeline
                 target={texts.map((item, index) => (
                   <p
                     key={item.key}
-                    className={`uppercase w-full text-xl font-semibold p-2 ${
+                    className={`uppercase w-full text-2xl font-semibold p-2 ${
                       index !== 0 ? 'absolute' : 'relative'
                     }`}
-                    style={{ opacity: 0, top: 0 }}
+                    style={{ opacity: 0, top: '-100%' }}
                   >
                     {item.text}
                   </p>
