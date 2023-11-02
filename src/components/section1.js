@@ -26,7 +26,7 @@ export default function Section1() {
       <div id='section1trigger' className='w-full h-[200vh]'></div>
       <section
         id='section-1'
-        className={`w-full h-screen flex flex-col justify-end items-center pb-3 fixed top-0 left-0 z-40 ${
+        className={`w-full h-screen flex flex-col justify-end items-center pb-15 fixed top-0 left-0 z-40 ${
           progress >= 1 ? ` hidden` : ` block`
         }`}
       >
