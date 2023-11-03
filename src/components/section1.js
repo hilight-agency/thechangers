@@ -26,13 +26,18 @@ export default function Section1() {
       <div id='section1trigger' className='w-full h-[200vh]'></div>
       <section
         id='section-1'
-        className={`w-full h-screen flex flex-col justify-end items-center pb-15 fixed top-0 left-0 z-40 ${
+        className={`w-full h-screen flex flex-col justify-end items-center fixed top-0 left-0 z-40 ${
           progress >= 1 ? ` hidden` : ` block`
         }`}
       >
-        <div className='flex items-center flex-col gap-1' style={{ opacity: 1.2 - progress * 5 }}>
+        <div className='flex items-center flex-col pb-12' style={{ opacity: 1.2 - progress * 5 }}>
           <Timer deadline={new Date('2023-11-27T05:00:00Z')} />
-          <Lottie animationData={ScrollDownLottie} loop autoPlay className='w-20' />
+          <Lottie
+            animationData={ScrollDownLottie}
+            loop
+            autoPlay
+            className='w-20 relative top-[-20px]'
+          />
         </div>
       </section>
       <ScrollTrigger
