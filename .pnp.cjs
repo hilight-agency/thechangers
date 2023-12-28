@@ -4121,7 +4121,7 @@ const RAW_RUNTIME_STATE =
           ["dotenv", "npm:7.0.0"],\
           ["dotenv-expand", "npm:5.1.0"],\
           ["json5", "npm:2.2.3"],\
-          ["msgpackr", "npm:1.9.9"],\
+          ["msgpackr", "npm:1.10.1"],\
           ["nullthrows", "npm:1.1.1"],\
           ["semver", "npm:5.7.2"]\
         ],\
@@ -13821,7 +13821,7 @@ const RAW_RUNTIME_STATE =
           ["@lmdb/lmdb-linux-arm64", "npm:2.5.2"],\
           ["@lmdb/lmdb-linux-x64", "npm:2.5.2"],\
           ["@lmdb/lmdb-win32-x64", "npm:2.5.2"],\
-          ["msgpackr", "npm:1.9.9"],\
+          ["msgpackr", "npm:1.10.1"],\
           ["node-addon-api", "npm:4.3.0"],\
           ["node-gyp", "npm:9.4.0"],\
           ["node-gyp-build-optional-packages", "npm:5.0.3"],\
@@ -13840,7 +13840,7 @@ const RAW_RUNTIME_STATE =
           ["@lmdb/lmdb-linux-arm64", "npm:2.5.3"],\
           ["@lmdb/lmdb-linux-x64", "npm:2.5.3"],\
           ["@lmdb/lmdb-win32-x64", "npm:2.5.3"],\
-          ["msgpackr", "npm:1.9.9"],\
+          ["msgpackr", "npm:1.10.1"],\
           ["node-addon-api", "npm:4.3.0"],\
           ["node-gyp", "npm:9.4.0"],\
           ["node-gyp-build-optional-packages", "npm:5.0.3"],\
@@ -14689,10 +14689,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["msgpackr", [\
-      ["npm:1.9.9", {\
-        "packageLocation": "../../.yarn/berry/cache/msgpackr-npm-1.9.9-75b366d55f-10c0.zip/node_modules/msgpackr/",\
+      ["npm:1.10.1", {\
+        "packageLocation": "../../.yarn/berry/cache/msgpackr-npm-1.10.1-5c5ff5c553-10c0.zip/node_modules/msgpackr/",\
         "packageDependencies": [\
-          ["msgpackr", "npm:1.9.9"],\
+          ["msgpackr", "npm:1.10.1"],\
           ["msgpackr-extract", "npm:3.0.2"]\
         ],\
         "linkType": "HARD"\
